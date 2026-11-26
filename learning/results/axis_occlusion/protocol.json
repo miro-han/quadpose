@@ -1,0 +1,23 @@
+{
+  "d0_rectangles": {
+    "active_camera_frames": 12,
+    "geometric_lost": 0,
+    "partially_clipped_spans": 13,
+    "total_span_tests": 81
+  },
+  "sphere_losses_by_axis": {
+    "front": 127,
+    "side": 186,
+    "top": 49
+  },
+  "sphere_radius_m": 0.085,
+  "support_plane_gap_m": 0.008,
+  "trajectories": 2,
+  "frames_per_trajectory": 12,
+  "methods": [
+    "all",
+    "cross_verify",
+    "recovery",
+    "gt_correspondence"
+  ]
+}
