@@ -1,0 +1,25 @@
+{
+  "train_feature_preparation_ms": 17167.5076,
+  "models": {
+    "learned_logistic": {
+      "sha256_arrays": "0f6d5503edd49a6a136e2d8bf3e7955cb1afbfb0714e2ded8b1925eafe78ddf6",
+      "optimization_ms": 97.8358,
+      "parameter_count": 13
+    },
+    "learned_mlp": {
+      "sha256_arrays": "61921cedc214add9dc8d106fb252c3840fa71eb17c07d30d948cee7a4cd51215",
+      "optimization_ms": 222.9761,
+      "parameter_count": 225
+    },
+    "rank_linear": {
+      "sha256_arrays": "e10034da89aa2f870e0710e05f90102770525e5d7556a10aaa6d46cd60d49963",
+      "optimization_ms": 115.6414,
+      "parameter_count": 15
+    },
+    "rank_mlp": {
+      "sha256_arrays": "066e9f74a008031f20feb9e3d1c92a2c1f929aa35a490d00d08a2c627025662c",
+      "optimization_ms": 314.4445,
+      "parameter_count": 257
+    }
+  }
+}

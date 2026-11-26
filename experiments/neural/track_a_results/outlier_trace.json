@@ -1,0 +1,2676 @@
+{
+  "trial": "D0-lockbox-76405",
+  "regime": "extrinsics",
+  "model": "learned_mlp",
+  "frozen_dev_threshold": 0.35,
+  "frames": [
+    {
+      "frame": 0,
+      "accepted": true,
+      "translation_error_mm": 0.4969690628628098,
+      "rotation_error_deg": 0.29187464355273135,
+      "prior_translation_m": [
+        0.03752441336886314,
+        0.05255781583298751,
+        -0.03699260979812272
+      ],
+      "candidate_translation_m": [
+        0.030097510744287008,
+        0.048148977929705315,
+        -0.03933063760102141
+      ],
+      "truth_translation_m": [
+        0.029906464538843013,
+        0.04774306197041414,
+        -0.03911683434842474
+      ],
+      "prior_to_candidate_mm": 8.94779907348622,
+      "candidate_residual_equations": 90,
+      "initial_singular_values": [
+        7790.021681737251,
+        7052.171532042401,
+        6074.206086516625,
+        812.620346864039,
+        602.2091056638302,
+        477.3151014448703
+      ],
+      "reported_initial_condition": 16.3205011912597,
+      "prior_huber": 1866.6681840803494,
+      "final_huber": 136.53197502850827,
+      "final_residual_rms_px": 2.375931979036132,
+      "rechecked_rank": 6,
+      "rechecked_normalized_min_eigenvalue": 1377.6495813384893,
+      "rechecked_normalized_condition": 15.343982099330645,
+      "rechecked_view_support": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "cameras": [
+        {
+          "name": "front",
+          "fault_active": false,
+          "input_corner_count": 6,
+          "input_edge_count": 5,
+          "prior_visible_model_corner_count": 4,
+          "prior_visible_model_edge_count": 4,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.6336538529345647,
+          "pose_max_depth_m": 0.7626441029248461,
+          "corners": [
+            {
+              "claimed_id": 4,
+              "observation": 0,
+              "physical_id": 4
+            },
+            {
+              "claimed_id": 5,
+              "observation": 1,
+              "physical_id": 5
+            },
+            {
+              "claimed_id": 0,
+              "observation": 2,
+              "physical_id": 0
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 0,
+              "observation": 1,
+              "physical_id": 0,
+              "score": 0.43949320912361145,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 120.64418983664802,
+              "observed_length_px": 70.87319804122131,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 2,
+              "observation": 3,
+              "physical_id": 2,
+              "score": 0.604852557182312,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 267.71056515381986,
+              "observed_length_px": 176.7545741433216,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 8,
+              "observation": 2,
+              "physical_id": 8,
+              "score": 0.873259425163269,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 119.36181390729767,
+              "observed_length_px": 80.58081384571939,
+              "postfit_geometric_gate": true
+            }
+          ]
+        },
+        {
+          "name": "side",
+          "fault_active": false,
+          "input_corner_count": 9,
+          "input_edge_count": 10,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.5189814472529877,
+          "pose_max_depth_m": 0.7208235312584383,
+          "corners": [
+            {
+              "claimed_id": 4,
+              "observation": 8,
+              "physical_id": 4
+            },
+            {
+              "claimed_id": 3,
+              "observation": 2,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 6,
+              "observation": 6,
+              "physical_id": 6
+            },
+            {
+              "claimed_id": 1,
+              "observation": 5,
+              "physical_id": 1
+            },
+            {
+              "claimed_id": 5,
+              "observation": 1,
+              "physical_id": 5
+            },
+            {
+              "claimed_id": 0,
+              "observation": 7,
+              "physical_id": 0
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 0,
+              "observation": 8,
+              "physical_id": 0,
+              "score": 0.6341556906700134,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 106.49857177042387,
+              "observed_length_px": 91.32386262595854,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 2,
+              "observation": 1,
+              "physical_id": 2,
+              "score": 0.939346432685852,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 63.961824605696755,
+              "observed_length_px": 53.84823089674439,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 3,
+              "observation": 7,
+              "physical_id": 3,
+              "score": 0.535416841506958,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 151.5765942069267,
+              "observed_length_px": 86.32035310094754,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 4,
+              "observation": 4,
+              "physical_id": 4,
+              "score": 0.792927622795105,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 26.61196728043552,
+              "observed_length_px": 24.06679240422536,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 8,
+              "observation": 2,
+              "physical_id": 8,
+              "score": 0.7646968364715576,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 144.25715930154652,
+              "observed_length_px": 84.2416127574982,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 9,
+              "observation": 5,
+              "physical_id": 9,
+              "score": 0.8166605234146118,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 203.0224815342783,
+              "observed_length_px": 130.17706886925384,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 10,
+              "observation": 3,
+              "physical_id": 10,
+              "score": 0.6702824234962463,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 206.22638933812374,
+              "observed_length_px": 117.63778768708501,
+              "postfit_geometric_gate": true
+            }
+          ]
+        },
+        {
+          "name": "top",
+          "fault_active": false,
+          "input_corner_count": 8,
+          "input_edge_count": 8,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.6363065362297315,
+          "pose_max_depth_m": 0.7423547389723113,
+          "corners": [
+            {
+              "claimed_id": 2,
+              "observation": 0,
+              "physical_id": 2
+            },
+            {
+              "claimed_id": 0,
+              "observation": 2,
+              "physical_id": 1
+            },
+            {
+              "claimed_id": 1,
+              "observation": 3,
+              "physical_id": -1
+            },
+            {
+              "claimed_id": 7,
+              "observation": 5,
+              "physical_id": 7
+            },
+            {
+              "claimed_id": 3,
+              "observation": 1,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 5,
+              "observation": 6,
+              "physical_id": 5
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 1,
+              "observation": 0,
+              "physical_id": 3,
+              "score": 0.8653509616851807,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 149.26681392022053,
+              "observed_length_px": 105.36260095320844,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 4,
+              "observation": 7,
+              "physical_id": 4,
+              "score": 0.6392261981964111,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 262.16149075528585,
+              "observed_length_px": 232.6061603231393,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 5,
+              "observation": 2,
+              "physical_id": 5,
+              "score": 0.9054133296012878,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 20.26025746742713,
+              "observed_length_px": 17.148860470646227,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 7,
+              "observation": 6,
+              "physical_id": 7,
+              "score": 0.855408787727356,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 261.08433583091687,
+              "observed_length_px": 217.60418271480626,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 10,
+              "observation": 3,
+              "physical_id": 10,
+              "score": 0.8469909429550171,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 164.21491286855922,
+              "observed_length_px": 120.0149715958026,
+              "postfit_geometric_gate": true
+            }
+          ]
+        },
+        {
+          "name": "diagonal",
+          "fault_active": false,
+          "input_corner_count": 9,
+          "input_edge_count": 10,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 1.048897229084779,
+          "pose_max_depth_m": 1.269027968044998,
+          "corners": [
+            {
+              "claimed_id": 4,
+              "observation": 7,
+              "physical_id": 4
+            },
+            {
+              "claimed_id": 6,
+              "observation": 2,
+              "physical_id": 6
+            },
+            {
+              "claimed_id": 0,
+              "observation": 5,
+              "physical_id": 0
+            },
+            {
+              "claimed_id": 3,
+              "observation": 1,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 7,
+              "observation": 6,
+              "physical_id": 7
+            },
+            {
+              "claimed_id": 5,
+              "observation": 0,
+              "physical_id": 5
+            },
+            {
+              "claimed_id": 1,
+              "observation": 8,
+              "physical_id": 1
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 0,
+              "observation": 1,
+              "physical_id": 0,
+              "score": 0.8602701425552368,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 51.28425615621249,
+              "observed_length_px": 30.14627051820023,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 3,
+              "observation": 7,
+              "physical_id": 3,
+              "score": 0.8761281967163086,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 71.58571906671465,
+              "observed_length_px": 42.62649829084794,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 4,
+              "observation": 2,
+              "physical_id": 4,
+              "score": 0.8484228253364563,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 137.3544723974221,
+              "observed_length_px": 89.3799114010693,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 7,
+              "observation": 4,
+              "physical_id": 7,
+              "score": 0.8160111904144287,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 131.30902245335682,
+              "observed_length_px": 75.96963821188197,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 8,
+              "observation": 9,
+              "physical_id": 8,
+              "score": 0.857001781463623,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 52.85969548352194,
+              "observed_length_px": 43.15029366629562,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 9,
+              "observation": 0,
+              "physical_id": 9,
+              "score": 0.9289944171905518,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 72.90083787103949,
+              "observed_length_px": 50.92709329564301,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 10,
+              "observation": 8,
+              "physical_id": 10,
+              "score": 0.9172094464302063,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 73.78793136142048,
+              "observed_length_px": 49.46162530483481,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 11,
+              "observation": 5,
+              "physical_id": 11,
+              "score": 0.9264203906059265,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 51.948221735638754,
+              "observed_length_px": 35.22248330743224,
+              "postfit_geometric_gate": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "accepted": true,
+      "translation_error_mm": 2.189987698389033,
+      "rotation_error_deg": 1.1935625315430296,
+      "prior_translation_m": [
+        0.030097510744287008,
+        0.048148977929705315,
+        -0.03933063760102141
+      ],
+      "candidate_translation_m": [
+        0.025674460200171396,
+        0.047103077735774275,
+        -0.039983040791712665
+      ],
+      "truth_translation_m": [
+        0.024866125902643255,
+        0.04885526593949662,
+        -0.04101864606461892
+      ],
+      "prior_to_candidate_mm": 4.591613360757908,
+      "candidate_residual_equations": 76,
+      "initial_singular_values": [
+        7279.267242178322,
+        5792.845398514793,
+        5031.578069192325,
+        691.5860356518673,
+        568.041259437008,
+        428.0629864372432
+      ],
+      "reported_initial_condition": 17.00513119053686,
+      "prior_huber": 1466.804862649924,
+      "final_huber": 555.7285262090587,
+      "final_residual_rms_px": 6.82188425324779,
+      "rechecked_rank": 6,
+      "rechecked_normalized_min_eigenvalue": 1046.1776555677457,
+      "rechecked_normalized_condition": 17.37550851020491,
+      "rechecked_view_support": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "cameras": [
+        {
+          "name": "front",
+          "fault_active": false,
+          "input_corner_count": 7,
+          "input_edge_count": 9,
+          "prior_visible_model_corner_count": 4,
+          "prior_visible_model_edge_count": 4,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.6316596971748629,
+          "pose_max_depth_m": 0.7625464582966857,
+          "corners": [
+            {
+              "claimed_id": 4,
+              "observation": 6,
+              "physical_id": 4
+            },
+            {
+              "claimed_id": 1,
+              "observation": 5,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 0,
+              "observation": 2,
+              "physical_id": -1
+            },
+            {
+              "claimed_id": 5,
+              "observation": 4,
+              "physical_id": 5
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 2,
+              "observation": 7,
+              "physical_id": -1,
+              "score": 0.8565326929092407,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 268.2132197825639,
+              "observed_length_px": 224.28398821342907,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 4,
+              "observation": 8,
+              "physical_id": 7,
+              "score": 0.7294033765792847,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 268.8627512453921,
+              "observed_length_px": 173.04172193001577,
+              "postfit_geometric_gate": true
+            }
+          ]
+        },
+        {
+          "name": "side",
+          "fault_active": false,
+          "input_corner_count": 6,
+          "input_edge_count": 9,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.525896668170825,
+          "pose_max_depth_m": 0.7227544114288322,
+          "corners": [
+            {
+              "claimed_id": 3,
+              "observation": 0,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 5,
+              "observation": 2,
+              "physical_id": 1
+            },
+            {
+              "claimed_id": 4,
+              "observation": 1,
+              "physical_id": 4
+            },
+            {
+              "claimed_id": 1,
+              "observation": 4,
+              "physical_id": 5
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 3,
+              "observation": 0,
+              "physical_id": 3,
+              "score": 0.6494568586349487,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 150.6306526611119,
+              "observed_length_px": 120.48400142763116,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 7,
+              "observation": 5,
+              "physical_id": 7,
+              "score": 0.7316285371780396,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 34.174737951377175,
+              "observed_length_px": 25.013705355488373,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 9,
+              "observation": 3,
+              "physical_id": 9,
+              "score": 0.7531049847602844,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 204.33568670308858,
+              "observed_length_px": 165.53602171922532,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 10,
+              "observation": 4,
+              "physical_id": 10,
+              "score": 0.7768060564994812,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 204.74848758139993,
+              "observed_length_px": 143.9781662362478,
+              "postfit_geometric_gate": true
+            }
+          ]
+        },
+        {
+          "name": "top",
+          "fault_active": false,
+          "input_corner_count": 6,
+          "input_edge_count": 5,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 8,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.6451382833524987,
+          "pose_max_depth_m": 0.7348277982309267,
+          "corners": [
+            {
+              "claimed_id": 3,
+              "observation": 1,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 1,
+              "observation": 2,
+              "physical_id": -1
+            },
+            {
+              "claimed_id": 7,
+              "observation": 3,
+              "physical_id": 7
+            },
+            {
+              "claimed_id": 4,
+              "observation": 0,
+              "physical_id": 5
+            },
+            {
+              "claimed_id": 0,
+              "observation": 5,
+              "physical_id": 1
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 2,
+              "observation": 0,
+              "physical_id": 4,
+              "score": 0.5883703231811523,
+              "output_model_edge_visible": false,
+              "output_projected_length_px": 232.99958884401198,
+              "observed_length_px": 158.17731425244278,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 3,
+              "observation": 3,
+              "physical_id": 3,
+              "score": 0.466300368309021,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 167.32353297843315,
+              "observed_length_px": 101.49077797679196,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 10,
+              "observation": 2,
+              "physical_id": 10,
+              "score": 0.5553358793258667,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 166.65444726225812,
+              "observed_length_px": 131.18600970421807,
+              "postfit_geometric_gate": true
+            }
+          ]
+        },
+        {
+          "name": "diagonal",
+          "fault_active": false,
+          "input_corner_count": 9,
+          "input_edge_count": 11,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 1.0469869999416284,
+          "pose_max_depth_m": 1.275591124831226,
+          "corners": [
+            {
+              "claimed_id": 3,
+              "observation": 8,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 6,
+              "observation": 5,
+              "physical_id": 6
+            },
+            {
+              "claimed_id": 0,
+              "observation": 2,
+              "physical_id": 0
+            },
+            {
+              "claimed_id": 1,
+              "observation": 3,
+              "physical_id": 1
+            },
+            {
+              "claimed_id": 4,
+              "observation": 7,
+              "physical_id": 4
+            },
+            {
+              "claimed_id": 7,
+              "observation": 0,
+              "physical_id": 7
+            },
+            {
+              "claimed_id": 5,
+              "observation": 6,
+              "physical_id": 5
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 0,
+              "observation": 1,
+              "physical_id": 0,
+              "score": 0.9483650326728821,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 51.70638296740209,
+              "observed_length_px": 35.73117034872315,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 2,
+              "observation": 5,
+              "physical_id": 2,
+              "score": 0.881424069404602,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 123.08562099507493,
+              "observed_length_px": 74.94767392333308,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 3,
+              "observation": 6,
+              "physical_id": 3,
+              "score": 0.9300966262817383,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 75.88439055418483,
+              "observed_length_px": 48.45159414522125,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 4,
+              "observation": 4,
+              "physical_id": 4,
+              "score": 0.6689580678939819,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 125.66960530485176,
+              "observed_length_px": 76.97034878347829,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 7,
+              "observation": 0,
+              "physical_id": 7,
+              "score": 0.7864238023757935,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 122.3980072213323,
+              "observed_length_px": 66.956643258233,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 8,
+              "observation": 9,
+              "physical_id": 8,
+              "score": 0.8147852420806885,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 53.86889542277338,
+              "observed_length_px": 44.6170568114461,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 9,
+              "observation": 7,
+              "physical_id": 9,
+              "score": 0.8926370143890381,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 78.49905301376853,
+              "observed_length_px": 43.88136929765755,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 10,
+              "observation": 10,
+              "physical_id": 10,
+              "score": 0.8724308013916016,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 80.28108631248172,
+              "observed_length_px": 57.138107150240636,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 11,
+              "observation": 2,
+              "physical_id": 11,
+              "score": 0.9212848544120789,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 52.91590552895291,
+              "observed_length_px": 32.062955706900595,
+              "postfit_geometric_gate": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "accepted": true,
+      "translation_error_mm": 0.7612356057253281,
+      "rotation_error_deg": 0.15175687101846608,
+      "prior_translation_m": [
+        0.025674460200171396,
+        0.047103077735774275,
+        -0.039983040791712665
+      ],
+      "candidate_translation_m": [
+        0.026634300083449552,
+        0.04962408315383042,
+        -0.04092301204421952
+      ],
+      "truth_translation_m": [
+        0.02591799668192047,
+        0.049381134210997116,
+        -0.04083719307453301
+      ],
+      "prior_to_candidate_mm": 2.8566250847703425,
+      "candidate_residual_equations": 84,
+      "initial_singular_values": [
+        8062.933190861972,
+        6773.315532973751,
+        5684.425201529945,
+        750.5340981274388,
+        618.3570910884914,
+        497.326843886756
+      ],
+      "reported_initial_condition": 16.21254370234225,
+      "prior_huber": 855.3195401027485,
+      "final_huber": 687.5687364137573,
+      "final_residual_rms_px": 6.7375603909910255,
+      "rechecked_rank": 6,
+      "rechecked_normalized_min_eigenvalue": 1440.2713347426175,
+      "rechecked_normalized_condition": 15.554711225399165,
+      "rechecked_view_support": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "cameras": [
+        {
+          "name": "front",
+          "fault_active": false,
+          "input_corner_count": 8,
+          "input_edge_count": 8,
+          "prior_visible_model_corner_count": 6,
+          "prior_visible_model_edge_count": 7,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.6331128073277579,
+          "pose_max_depth_m": 0.7661353589799029,
+          "corners": [
+            {
+              "claimed_id": 0,
+              "observation": 4,
+              "physical_id": 0
+            },
+            {
+              "claimed_id": 3,
+              "observation": 5,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 7,
+              "observation": 3,
+              "physical_id": 7
+            },
+            {
+              "claimed_id": 4,
+              "observation": 1,
+              "physical_id": 4
+            },
+            {
+              "claimed_id": 5,
+              "observation": 2,
+              "physical_id": 5
+            },
+            {
+              "claimed_id": 1,
+              "observation": 0,
+              "physical_id": 1
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 0,
+              "observation": 5,
+              "physical_id": 0,
+              "score": 0.9323872327804565,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 118.30955271620375,
+              "observed_length_px": 84.77416925124021,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 2,
+              "observation": 2,
+              "physical_id": 2,
+              "score": 0.8934540152549744,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 266.9653475943864,
+              "observed_length_px": 174.08752630809232,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 3,
+              "observation": 3,
+              "physical_id": 3,
+              "score": 0.9765984416007996,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 23.95484425886748,
+              "observed_length_px": 16.92243204486466,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 4,
+              "observation": 0,
+              "physical_id": 4,
+              "score": 0.8520535230636597,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 267.94110080524763,
+              "observed_length_px": 170.1227630654306,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 7,
+              "observation": 1,
+              "physical_id": 7,
+              "score": 0.8857406377792358,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 225.66354054727114,
+              "observed_length_px": 142.27031545929464,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 10,
+              "observation": 7,
+              "physical_id": 10,
+              "score": 0.9796808958053589,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 19.028897017443114,
+              "observed_length_px": 13.487643234508573,
+              "postfit_geometric_gate": true
+            }
+          ]
+        },
+        {
+          "name": "side",
+          "fault_active": false,
+          "input_corner_count": 8,
+          "input_edge_count": 7,
+          "prior_visible_model_corner_count": 6,
+          "prior_visible_model_edge_count": 7,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.5242492303477417,
+          "pose_max_depth_m": 0.7224821694853593,
+          "corners": [
+            {
+              "claimed_id": 1,
+              "observation": 1,
+              "physical_id": 1
+            },
+            {
+              "claimed_id": 7,
+              "observation": 2,
+              "physical_id": 7
+            },
+            {
+              "claimed_id": 5,
+              "observation": 6,
+              "physical_id": 5
+            },
+            {
+              "claimed_id": 3,
+              "observation": 5,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 6,
+              "observation": 4,
+              "physical_id": 6
+            },
+            {
+              "claimed_id": 4,
+              "observation": 7,
+              "physical_id": 4
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 4,
+              "observation": 3,
+              "physical_id": 4,
+              "score": 0.952741265296936,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 21.937036246227247,
+              "observed_length_px": 16.164310843313746,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 7,
+              "observation": 0,
+              "physical_id": 7,
+              "score": 0.9749197959899902,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 33.45180674806454,
+              "observed_length_px": 23.421318465039537,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 8,
+              "observation": 2,
+              "physical_id": 8,
+              "score": 0.8318861126899719,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 143.53678334459545,
+              "observed_length_px": 73.01075584512266,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 9,
+              "observation": 6,
+              "physical_id": 9,
+              "score": 0.9007532596588135,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 204.65753692109055,
+              "observed_length_px": 168.01443734630695,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 11,
+              "observation": 1,
+              "physical_id": 11,
+              "score": 0.912520170211792,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 145.43582789929565,
+              "observed_length_px": 91.95344430284746,
+              "postfit_geometric_gate": true
+            }
+          ]
+        },
+        {
+          "name": "top",
+          "fault_active": false,
+          "input_corner_count": 5,
+          "input_edge_count": 6,
+          "prior_visible_model_corner_count": 4,
+          "prior_visible_model_edge_count": 4,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.6448829098169666,
+          "pose_max_depth_m": 0.7369631142714724,
+          "corners": [
+            {
+              "claimed_id": 7,
+              "observation": 3,
+              "physical_id": 7
+            },
+            {
+              "claimed_id": 5,
+              "observation": 4,
+              "physical_id": 5
+            },
+            {
+              "claimed_id": 1,
+              "observation": 2,
+              "physical_id": 1
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 3,
+              "observation": 5,
+              "physical_id": 3,
+              "score": 0.8940767049789429,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 167.34481508762073,
+              "observed_length_px": 126.50704432708899,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 4,
+              "observation": 2,
+              "physical_id": 4,
+              "score": 0.8438428044319153,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 262.8000185009754,
+              "observed_length_px": 152.68022442630811,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 7,
+              "observation": 0,
+              "physical_id": 7,
+              "score": 0.7990303039550781,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 264.0944108124757,
+              "observed_length_px": 181.3356807360507,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 10,
+              "observation": 4,
+              "physical_id": 10,
+              "score": 0.899877667427063,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 166.33033688467884,
+              "observed_length_px": 113.19440353810117,
+              "postfit_geometric_gate": true
+            }
+          ]
+        },
+        {
+          "name": "diagonal",
+          "fault_active": true,
+          "input_corner_count": 8,
+          "input_edge_count": 9,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 1.048658802677453,
+          "pose_max_depth_m": 1.2768073860902391,
+          "corners": [
+            {
+              "claimed_id": 3,
+              "observation": 2,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 6,
+              "observation": 0,
+              "physical_id": -1
+            },
+            {
+              "claimed_id": 4,
+              "observation": 4,
+              "physical_id": -1
+            },
+            {
+              "claimed_id": 1,
+              "observation": 1,
+              "physical_id": 1
+            },
+            {
+              "claimed_id": 0,
+              "observation": 3,
+              "physical_id": 0
+            },
+            {
+              "claimed_id": 7,
+              "observation": 7,
+              "physical_id": 7
+            },
+            {
+              "claimed_id": 5,
+              "observation": 5,
+              "physical_id": 5
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 2,
+              "observation": 2,
+              "physical_id": 2,
+              "score": 0.7821756601333618,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 123.03310471474211,
+              "observed_length_px": 88.7636987713654,
+              "postfit_geometric_gate": false
+            },
+            {
+              "claimed_id": 3,
+              "observation": 5,
+              "physical_id": 3,
+              "score": 0.9084188938140869,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 76.2787915688299,
+              "observed_length_px": 55.531960087246375,
+              "postfit_geometric_gate": false
+            },
+            {
+              "claimed_id": 4,
+              "observation": 8,
+              "physical_id": 4,
+              "score": 0.8533618450164795,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 125.67311866164839,
+              "observed_length_px": 83.30300761621194,
+              "postfit_geometric_gate": false
+            },
+            {
+              "claimed_id": 7,
+              "observation": 1,
+              "physical_id": 7,
+              "score": 0.8466091156005859,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 122.4617650062127,
+              "observed_length_px": 95.57827135186942,
+              "postfit_geometric_gate": false
+            },
+            {
+              "claimed_id": 10,
+              "observation": 6,
+              "physical_id": 10,
+              "score": 0.8225336670875549,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 80.86394973505743,
+              "observed_length_px": 58.16341379959312,
+              "postfit_geometric_gate": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "accepted": true,
+      "translation_error_mm": 0.7763354150799107,
+      "rotation_error_deg": 0.39930789923286947,
+      "prior_translation_m": [
+        0.026634300083449552,
+        0.04962408315383042,
+        -0.04092301204421952
+      ],
+      "candidate_translation_m": [
+        0.02730643387849149,
+        0.049954027574852726,
+        -0.04046018103299895
+      ],
+      "truth_translation_m": [
+        0.026625557177835144,
+        0.04966490080918181,
+        -0.0406957851683262
+      ],
+      "prior_to_candidate_mm": 0.880249796562701,
+      "candidate_residual_equations": 82,
+      "initial_singular_values": [
+        8317.082998338952,
+        6851.005470454658,
+        5683.324830026318,
+        763.9396674833225,
+        645.8453655022303,
+        514.6873558360769
+      ],
+      "reported_initial_condition": 16.1594857616589,
+      "prior_huber": 650.559313131351,
+      "final_huber": 600.4506801791468,
+      "final_residual_rms_px": 6.564224264078577,
+      "rechecked_rank": 6,
+      "rechecked_normalized_min_eigenvalue": 1526.796455315942,
+      "rechecked_normalized_condition": 15.759110945363684,
+      "rechecked_view_support": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "cameras": [
+        {
+          "name": "front",
+          "fault_active": false,
+          "input_corner_count": 7,
+          "input_edge_count": 8,
+          "prior_visible_model_corner_count": 6,
+          "prior_visible_model_edge_count": 7,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.6342150476387909,
+          "pose_max_depth_m": 0.7656930075109146,
+          "corners": [
+            {
+              "claimed_id": 5,
+              "observation": 4,
+              "physical_id": 5
+            },
+            {
+              "claimed_id": 0,
+              "observation": 3,
+              "physical_id": 0
+            },
+            {
+              "claimed_id": 3,
+              "observation": 1,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 4,
+              "observation": 6,
+              "physical_id": 4
+            },
+            {
+              "claimed_id": 7,
+              "observation": 5,
+              "physical_id": 7
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 0,
+              "observation": 2,
+              "physical_id": 0,
+              "score": 0.9407439827919006,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 118.40083914773517,
+              "observed_length_px": 84.1315254246483,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 2,
+              "observation": 6,
+              "physical_id": 2,
+              "score": 0.8887535929679871,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 266.88223913897156,
+              "observed_length_px": 166.9818016652135,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 3,
+              "observation": 0,
+              "physical_id": 3,
+              "score": 0.9839370250701904,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 22.445443252314508,
+              "observed_length_px": 16.653013540362,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 4,
+              "observation": 5,
+              "physical_id": 4,
+              "score": 0.7895755171775818,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 267.89069689923093,
+              "observed_length_px": 173.16750595363035,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 7,
+              "observation": 4,
+              "physical_id": 7,
+              "score": 0.8695226907730103,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 225.59592108015977,
+              "observed_length_px": 167.7818284717155,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 10,
+              "observation": 3,
+              "physical_id": 10,
+              "score": 0.9782309532165527,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 20.53790084324769,
+              "observed_length_px": 11.992059398313407,
+              "postfit_geometric_gate": true
+            }
+          ]
+        },
+        {
+          "name": "side",
+          "fault_active": false,
+          "input_corner_count": 7,
+          "input_edge_count": 9,
+          "prior_visible_model_corner_count": 6,
+          "prior_visible_model_edge_count": 7,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.523732415068619,
+          "pose_max_depth_m": 0.7216547171743981,
+          "corners": [
+            {
+              "claimed_id": 6,
+              "observation": 3,
+              "physical_id": 6
+            },
+            {
+              "claimed_id": 4,
+              "observation": 6,
+              "physical_id": 4
+            },
+            {
+              "claimed_id": 3,
+              "observation": 2,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 5,
+              "observation": 1,
+              "physical_id": 5
+            },
+            {
+              "claimed_id": 1,
+              "observation": 5,
+              "physical_id": 1
+            },
+            {
+              "claimed_id": 7,
+              "observation": 4,
+              "physical_id": -1
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 3,
+              "observation": 7,
+              "physical_id": 3,
+              "score": 0.9128744006156921,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 151.1290888085159,
+              "observed_length_px": 98.24001295920661,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 4,
+              "observation": 1,
+              "physical_id": 4,
+              "score": 0.9824761152267456,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 20.194194195148214,
+              "observed_length_px": 13.228730184698529,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 7,
+              "observation": 0,
+              "physical_id": 7,
+              "score": 0.9746147394180298,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 36.433672930963255,
+              "observed_length_px": 21.402646124434064,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 8,
+              "observation": 6,
+              "physical_id": 8,
+              "score": 0.912020206451416,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 143.74281690591155,
+              "observed_length_px": 91.81135750704469,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 9,
+              "observation": 4,
+              "physical_id": 9,
+              "score": 0.9052867293357849,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 204.7686947849512,
+              "observed_length_px": 166.79901066772888,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 10,
+              "observation": 3,
+              "physical_id": 10,
+              "score": 0.9032196402549744,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 205.65553734733302,
+              "observed_length_px": 168.00514167686748,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 11,
+              "observation": 2,
+              "physical_id": 11,
+              "score": 0.9309760332107544,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 145.363755442481,
+              "observed_length_px": 101.76623809624535,
+              "postfit_geometric_gate": true
+            }
+          ]
+        },
+        {
+          "name": "top",
+          "fault_active": false,
+          "input_corner_count": 6,
+          "input_edge_count": 6,
+          "prior_visible_model_corner_count": 4,
+          "prior_visible_model_edge_count": 4,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.6436665484864664,
+          "pose_max_depth_m": 0.7372538135795315,
+          "corners": [
+            {
+              "claimed_id": 3,
+              "observation": 4,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 5,
+              "observation": 2,
+              "physical_id": 5
+            },
+            {
+              "claimed_id": 1,
+              "observation": 5,
+              "physical_id": 1
+            },
+            {
+              "claimed_id": 7,
+              "observation": 0,
+              "physical_id": 7
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 3,
+              "observation": 2,
+              "physical_id": 3,
+              "score": 0.8843356370925903,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 167.65705446848816,
+              "observed_length_px": 133.39603425366317,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 4,
+              "observation": 3,
+              "physical_id": 4,
+              "score": 0.8883082866668701,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 262.8285617849799,
+              "observed_length_px": 184.6565225680925,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 7,
+              "observation": 0,
+              "physical_id": 7,
+              "score": 0.8881730437278748,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 264.1564510410682,
+              "observed_length_px": 199.38772704121598,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 10,
+              "observation": 1,
+              "physical_id": 10,
+              "score": 0.9146037101745605,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 166.2681436080863,
+              "observed_length_px": 115.84408576878315,
+              "postfit_geometric_gate": true
+            }
+          ]
+        },
+        {
+          "name": "diagonal",
+          "fault_active": true,
+          "input_corner_count": 9,
+          "input_edge_count": 6,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 1.0485813931497294,
+          "pose_max_depth_m": 1.27595523814572,
+          "corners": [
+            {
+              "claimed_id": 3,
+              "observation": 8,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 1,
+              "observation": 7,
+              "physical_id": 1
+            },
+            {
+              "claimed_id": 0,
+              "observation": 5,
+              "physical_id": 0
+            },
+            {
+              "claimed_id": 7,
+              "observation": 1,
+              "physical_id": 7
+            },
+            {
+              "claimed_id": 5,
+              "observation": 2,
+              "physical_id": 5
+            },
+            {
+              "claimed_id": 6,
+              "observation": 3,
+              "physical_id": 6
+            },
+            {
+              "claimed_id": 4,
+              "observation": 4,
+              "physical_id": 4
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 2,
+              "observation": 0,
+              "physical_id": 2,
+              "score": 0.8538203835487366,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 124.07012299465134,
+              "observed_length_px": 81.28492407409577,
+              "postfit_geometric_gate": false
+            },
+            {
+              "claimed_id": 10,
+              "observation": 1,
+              "physical_id": 10,
+              "score": 0.37599310278892517,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 80.4865794140431,
+              "observed_length_px": 43.55959566170294,
+              "postfit_geometric_gate": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "accepted": true,
+      "translation_error_mm": 22.174487587211097,
+      "rotation_error_deg": 3.231920886546003,
+      "prior_translation_m": [
+        0.02730643387849149,
+        0.049954027574852726,
+        -0.04046018103299895
+      ],
+      "candidate_translation_m": [
+        0.03198688318607415,
+        0.05157045752688876,
+        -0.039571287900542526
+      ],
+      "truth_translation_m": [
+        0.01339625450894058,
+        0.039746696836102755,
+        -0.042080293335240014
+      ],
+      "prior_to_candidate_mm": 5.03086299869301,
+      "candidate_residual_equations": 50,
+      "initial_singular_values": [
+        6342.0811048650685,
+        4130.327530647972,
+        3113.3090248572275,
+        586.7640960520447,
+        404.0529709463029,
+        326.3671451669416
+      ],
+      "reported_initial_condition": 19.432351567192832,
+      "prior_huber": 897.564182340463,
+      "final_huber": 739.3184463498029,
+      "final_residual_rms_px": 9.567748698010288,
+      "rechecked_rank": 6,
+      "rechecked_normalized_min_eigenvalue": 424.9086688392099,
+      "rechecked_normalized_condition": 22.3156657824892,
+      "rechecked_view_support": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "cameras": [
+        {
+          "name": "front",
+          "fault_active": false,
+          "input_corner_count": 7,
+          "input_edge_count": 7,
+          "prior_visible_model_corner_count": 6,
+          "prior_visible_model_edge_count": 7,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.6320582481131729,
+          "pose_max_depth_m": 0.7710826669406047,
+          "corners": [
+            {
+              "claimed_id": 1,
+              "observation": 0,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 7,
+              "observation": 1,
+              "physical_id": 5
+            },
+            {
+              "claimed_id": 4,
+              "observation": 4,
+              "physical_id": 4
+            },
+            {
+              "claimed_id": 0,
+              "observation": 5,
+              "physical_id": 0
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 2,
+              "observation": 5,
+              "physical_id": 2,
+              "score": 0.4401625990867615,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 265.09585830042704,
+              "observed_length_px": 147.82036800789012,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 4,
+              "observation": 2,
+              "physical_id": 4,
+              "score": 0.615492582321167,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 268.0639744105764,
+              "observed_length_px": 199.05551528052263,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 7,
+              "observation": 3,
+              "physical_id": -1,
+              "score": 0.668125331401825,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 225.90201131653163,
+              "observed_length_px": 143.8486356294219,
+              "postfit_geometric_gate": true
+            }
+          ]
+        },
+        {
+          "name": "side",
+          "fault_active": false,
+          "input_corner_count": 6,
+          "input_edge_count": 6,
+          "prior_visible_model_corner_count": 6,
+          "prior_visible_model_edge_count": 7,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.5178528025066526,
+          "pose_max_depth_m": 0.7181734311211991,
+          "corners": [
+            {
+              "claimed_id": 3,
+              "observation": 0,
+              "physical_id": 7
+            },
+            {
+              "claimed_id": 4,
+              "observation": 1,
+              "physical_id": 4
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 9,
+              "observation": 4,
+              "physical_id": -1,
+              "score": 0.45734646916389465,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 207.70146910240433,
+              "observed_length_px": 144.05650641970044,
+              "postfit_geometric_gate": false
+            },
+            {
+              "claimed_id": 10,
+              "observation": 0,
+              "physical_id": 10,
+              "score": 0.752067506313324,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 206.38576761849396,
+              "observed_length_px": 135.32028956741732,
+              "postfit_geometric_gate": true
+            }
+          ]
+        },
+        {
+          "name": "top",
+          "fault_active": false,
+          "input_corner_count": 6,
+          "input_edge_count": 6,
+          "prior_visible_model_corner_count": 4,
+          "prior_visible_model_edge_count": 4,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 0.6388879444050621,
+          "pose_max_depth_m": 0.740254631396023,
+          "corners": [
+            {
+              "claimed_id": 3,
+              "observation": 5,
+              "physical_id": 3
+            }
+          ],
+          "edges": []
+        },
+        {
+          "name": "diagonal",
+          "fault_active": true,
+          "input_corner_count": 8,
+          "input_edge_count": 9,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 1.0450379839265134,
+          "pose_max_depth_m": 1.2749342171908724,
+          "corners": [
+            {
+              "claimed_id": 5,
+              "observation": 1,
+              "physical_id": 5
+            },
+            {
+              "claimed_id": 7,
+              "observation": 3,
+              "physical_id": 7
+            },
+            {
+              "claimed_id": 3,
+              "observation": 5,
+              "physical_id": 3
+            },
+            {
+              "claimed_id": 1,
+              "observation": 2,
+              "physical_id": 1
+            },
+            {
+              "claimed_id": 0,
+              "observation": 7,
+              "physical_id": -1
+            },
+            {
+              "claimed_id": 6,
+              "observation": 0,
+              "physical_id": 6
+            }
+          ],
+          "edges": [
+            {
+              "claimed_id": 0,
+              "observation": 1,
+              "physical_id": 0,
+              "score": 0.8342002630233765,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 51.13982711309854,
+              "observed_length_px": 42.59560630292234,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 2,
+              "observation": 8,
+              "physical_id": 2,
+              "score": 0.8407434225082397,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 119.77426225807925,
+              "observed_length_px": 62.38901484017715,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 4,
+              "observation": 0,
+              "physical_id": 4,
+              "score": 0.8691674470901489,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 121.75451422510815,
+              "observed_length_px": 81.05454573829029,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 7,
+              "observation": 6,
+              "physical_id": 7,
+              "score": 0.86963951587677,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 119.542645034452,
+              "observed_length_px": 71.8245760496739,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 8,
+              "observation": 7,
+              "physical_id": 8,
+              "score": 0.931565523147583,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 53.26653523981159,
+              "observed_length_px": 30.59385350785637,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 9,
+              "observation": 5,
+              "physical_id": 9,
+              "score": 0.9330618977546692,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 81.6872733958717,
+              "observed_length_px": 62.84559550574256,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 11,
+              "observation": 4,
+              "physical_id": 11,
+              "score": 0.9186897277832031,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 52.546881779289784,
+              "observed_length_px": 36.4360637528699,
+              "postfit_geometric_gate": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "accepted": true,
+      "translation_error_mm": 3346.7157019078068,
+      "rotation_error_deg": 27.582879213511003,
+      "prior_translation_m": [
+        0.03198688318607415,
+        0.05157045752688876,
+        -0.039571287900542526
+      ],
+      "candidate_translation_m": [
+        -0.5616616987316885,
+        3.2933439448206485,
+        -0.06547618976504566
+      ],
+      "truth_translation_m": [
+        -0.03290821853570141,
+        -0.011256477496494107,
+        -0.04219969092488377
+      ],
+      "prior_to_candidate_mm": 3295.782918469347,
+      "candidate_residual_equations": 6,
+      "initial_singular_values": [
+        2716.101979642263,
+        931.4282460050806,
+        247.56714288905343,
+        160.45509303582344,
+        50.59529193227299,
+        18.609373473881142
+      ],
+      "reported_initial_condition": 145.95343488884245,
+      "prior_huber": 168.22753397064398,
+      "final_huber": 5.070931082559414,
+      "final_residual_rms_px": 1.3001193640789825,
+      "rechecked_rank": 6,
+      "rechecked_normalized_min_eigenvalue": 0.00021514744891556402,
+      "rechecked_normalized_condition": 511438.481476372,
+      "rechecked_view_support": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "cameras": [
+        {
+          "name": "front",
+          "fault_active": false,
+          "input_corner_count": 6,
+          "input_edge_count": 6,
+          "prior_visible_model_corner_count": 6,
+          "prior_visible_model_edge_count": 7,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 3.8451412982452555,
+          "pose_max_depth_m": 4.041546591396042,
+          "corners": [],
+          "edges": [
+            {
+              "claimed_id": 4,
+              "observation": 5,
+              "physical_id": -1,
+              "score": 0.529582679271698,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 40.2268151458232,
+              "observed_length_px": 226.03631449199412,
+              "postfit_geometric_gate": true
+            },
+            {
+              "claimed_id": 7,
+              "observation": 3,
+              "physical_id": 7,
+              "score": 0.43507200479507446,
+              "output_model_edge_visible": true,
+              "output_projected_length_px": 39.3994168487328,
+              "observed_length_px": 152.57535237685954,
+              "postfit_geometric_gate": false
+            }
+          ]
+        },
+        {
+          "name": "side",
+          "fault_active": false,
+          "input_corner_count": 8,
+          "input_edge_count": 7,
+          "prior_visible_model_corner_count": 4,
+          "prior_visible_model_edge_count": 4,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 1.0996214204789783,
+          "pose_max_depth_m": 1.3237019769843987,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "top",
+          "fault_active": false,
+          "input_corner_count": 7,
+          "input_edge_count": 10,
+          "prior_visible_model_corner_count": 4,
+          "prior_visible_model_edge_count": 4,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 0.6369747516691892,
+          "pose_max_depth_m": 0.7939776278609022,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "diagonal",
+          "fault_active": true,
+          "input_corner_count": 9,
+          "input_edge_count": 11,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 3.287638494494452,
+          "pose_max_depth_m": 3.491010038982745,
+          "corners": [],
+          "edges": [
+            {
+              "claimed_id": 10,
+              "observation": 2,
+              "physical_id": 9,
+              "score": 0.47411736845970154,
+              "output_model_edge_visible": false,
+              "output_projected_length_px": 32.36016321855112,
+              "observed_length_px": 52.83847170450279,
+              "postfit_geometric_gate": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "accepted": false,
+      "translation_error_mm": 3385.7521921793987,
+      "rotation_error_deg": 35.0951578525706,
+      "prior_translation_m": [
+        -0.5616616987316885,
+        3.2933439448206485,
+        -0.06547618976504566
+      ],
+      "candidate_translation_m": [
+        -0.5616616987316885,
+        3.2933439448206485,
+        -0.06547618976504566
+      ],
+      "truth_translation_m": [
+        -0.07144237088420374,
+        -0.05662430152047632,
+        -0.0387242560306123
+      ],
+      "prior_to_candidate_mm": 0.0,
+      "candidate_residual_equations": 0,
+      "initial_singular_values": [],
+      "reported_initial_condition": null,
+      "prior_huber": null,
+      "final_huber": null,
+      "final_residual_rms_px": null,
+      "rechecked_rank": 0,
+      "rechecked_normalized_min_eigenvalue": 0.0,
+      "rechecked_normalized_condition": null,
+      "rechecked_view_support": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "cameras": [
+        {
+          "name": "front",
+          "fault_active": false,
+          "input_corner_count": 6,
+          "input_edge_count": 8,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 3.8451412982452555,
+          "pose_max_depth_m": 4.041546591396042,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "side",
+          "fault_active": false,
+          "input_corner_count": 6,
+          "input_edge_count": 8,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 1.0996214204789783,
+          "pose_max_depth_m": 1.3237019769843987,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "top",
+          "fault_active": false,
+          "input_corner_count": 8,
+          "input_edge_count": 11,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 0.6369747516691892,
+          "pose_max_depth_m": 0.7939776278609022,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "diagonal",
+          "fault_active": true,
+          "input_corner_count": 8,
+          "input_edge_count": 11,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 3.287638494494452,
+          "pose_max_depth_m": 3.491010038982745,
+          "corners": [],
+          "edges": []
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "accepted": false,
+      "translation_error_mm": 3389.7130785601425,
+      "rotation_error_deg": 38.46348052590262,
+      "prior_translation_m": [
+        -0.5616616987316885,
+        3.2933439448206485,
+        -0.06547618976504566
+      ],
+      "candidate_translation_m": [
+        -0.5616616987316885,
+        3.2933439448206485,
+        -0.06547618976504566
+      ],
+      "truth_translation_m": [
+        -0.07701154088177938,
+        -0.06141374699305951,
+        -0.03598367080688909
+      ],
+      "prior_to_candidate_mm": 0.0,
+      "candidate_residual_equations": 0,
+      "initial_singular_values": [],
+      "reported_initial_condition": null,
+      "prior_huber": null,
+      "final_huber": null,
+      "final_residual_rms_px": null,
+      "rechecked_rank": 0,
+      "rechecked_normalized_min_eigenvalue": 0.0,
+      "rechecked_normalized_condition": null,
+      "rechecked_view_support": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "cameras": [
+        {
+          "name": "front",
+          "fault_active": false,
+          "input_corner_count": 6,
+          "input_edge_count": 8,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 3.8451412982452555,
+          "pose_max_depth_m": 4.041546591396042,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "side",
+          "fault_active": false,
+          "input_corner_count": 8,
+          "input_edge_count": 9,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 1.0996214204789783,
+          "pose_max_depth_m": 1.3237019769843987,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "top",
+          "fault_active": false,
+          "input_corner_count": 8,
+          "input_edge_count": 7,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 0.6369747516691892,
+          "pose_max_depth_m": 0.7939776278609022,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "diagonal",
+          "fault_active": true,
+          "input_corner_count": 8,
+          "input_edge_count": 11,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 3.287638494494452,
+          "pose_max_depth_m": 3.491010038982745,
+          "corners": [],
+          "edges": []
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "accepted": false,
+      "translation_error_mm": 3389.856995349154,
+      "rotation_error_deg": 38.23299921973994,
+      "prior_translation_m": [
+        -0.5616616987316885,
+        3.2933439448206485,
+        -0.06547618976504566
+      ],
+      "candidate_translation_m": [
+        -0.5616616987316885,
+        3.2933439448206485,
+        -0.06547618976504566
+      ],
+      "truth_translation_m": [
+        -0.07693290384208017,
+        -0.06155024544576023,
+        -0.03626289759928665
+      ],
+      "prior_to_candidate_mm": 0.0,
+      "candidate_residual_equations": 0,
+      "initial_singular_values": [],
+      "reported_initial_condition": null,
+      "prior_huber": null,
+      "final_huber": null,
+      "final_residual_rms_px": null,
+      "rechecked_rank": 0,
+      "rechecked_normalized_min_eigenvalue": 0.0,
+      "rechecked_normalized_condition": null,
+      "rechecked_view_support": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "cameras": [
+        {
+          "name": "front",
+          "fault_active": false,
+          "input_corner_count": 5,
+          "input_edge_count": 9,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 3.8451412982452555,
+          "pose_max_depth_m": 4.041546591396042,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "side",
+          "fault_active": false,
+          "input_corner_count": 6,
+          "input_edge_count": 8,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 1.0996214204789783,
+          "pose_max_depth_m": 1.3237019769843987,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "top",
+          "fault_active": false,
+          "input_corner_count": 9,
+          "input_edge_count": 7,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 0.6369747516691892,
+          "pose_max_depth_m": 0.7939776278609022,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "diagonal",
+          "fault_active": false,
+          "input_corner_count": 6,
+          "input_edge_count": 10,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 3.287638494494452,
+          "pose_max_depth_m": 3.491010038982745,
+          "corners": [],
+          "edges": []
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "accepted": false,
+      "translation_error_mm": 3389.8935569557484,
+      "rotation_error_deg": 37.96564945521067,
+      "prior_translation_m": [
+        -0.5616616987316885,
+        3.2933439448206485,
+        -0.06547618976504566
+      ],
+      "candidate_translation_m": [
+        -0.5616616987316885,
+        3.2933439448206485,
+        -0.06547618976504566
+      ],
+      "truth_translation_m": [
+        -0.07674717900920666,
+        -0.061562893935243154,
+        -0.03655665793340032
+      ],
+      "prior_to_candidate_mm": 0.0,
+      "candidate_residual_equations": 0,
+      "initial_singular_values": [],
+      "reported_initial_condition": null,
+      "prior_huber": null,
+      "final_huber": null,
+      "final_residual_rms_px": null,
+      "rechecked_rank": 0,
+      "rechecked_normalized_min_eigenvalue": 0.0,
+      "rechecked_normalized_condition": null,
+      "rechecked_view_support": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "cameras": [
+        {
+          "name": "front",
+          "fault_active": false,
+          "input_corner_count": 8,
+          "input_edge_count": 7,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 3.8451412982452555,
+          "pose_max_depth_m": 4.041546591396042,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "side",
+          "fault_active": false,
+          "input_corner_count": 7,
+          "input_edge_count": 9,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 1.0996214204789783,
+          "pose_max_depth_m": 1.3237019769843987,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "top",
+          "fault_active": false,
+          "input_corner_count": 9,
+          "input_edge_count": 10,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 0.6369747516691892,
+          "pose_max_depth_m": 0.7939776278609022,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "diagonal",
+          "fault_active": false,
+          "input_corner_count": 9,
+          "input_edge_count": 10,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 3.287638494494452,
+          "pose_max_depth_m": 3.491010038982745,
+          "corners": [],
+          "edges": []
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "accepted": false,
+      "translation_error_mm": 3384.260522815335,
+      "rotation_error_deg": 39.695732902852164,
+      "prior_translation_m": [
+        -0.5616616987316885,
+        3.2933439448206485,
+        -0.06547618976504566
+      ],
+      "candidate_translation_m": [
+        -0.5616616987316885,
+        3.2933439448206485,
+        -0.06547618976504566
+      ],
+      "truth_translation_m": [
+        -0.0739666445561087,
+        -0.055438691609908566,
+        -0.03341882929648429
+      ],
+      "prior_to_candidate_mm": 0.0,
+      "candidate_residual_equations": 0,
+      "initial_singular_values": [],
+      "reported_initial_condition": null,
+      "prior_huber": null,
+      "final_huber": null,
+      "final_residual_rms_px": null,
+      "rechecked_rank": 0,
+      "rechecked_normalized_min_eigenvalue": 0.0,
+      "rechecked_normalized_condition": null,
+      "rechecked_view_support": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "cameras": [
+        {
+          "name": "front",
+          "fault_active": false,
+          "input_corner_count": 7,
+          "input_edge_count": 8,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 3.8451412982452555,
+          "pose_max_depth_m": 4.041546591396042,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "side",
+          "fault_active": false,
+          "input_corner_count": 8,
+          "input_edge_count": 10,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 1.0996214204789783,
+          "pose_max_depth_m": 1.3237019769843987,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "top",
+          "fault_active": false,
+          "input_corner_count": 7,
+          "input_edge_count": 8,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 0.6369747516691892,
+          "pose_max_depth_m": 0.7939776278609022,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "diagonal",
+          "fault_active": false,
+          "input_corner_count": 7,
+          "input_edge_count": 10,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 3.287638494494452,
+          "pose_max_depth_m": 3.491010038982745,
+          "corners": [],
+          "edges": []
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "accepted": false,
+      "translation_error_mm": 3343.353200419187,
+      "rotation_error_deg": 39.98124395293653,
+      "prior_translation_m": [
+        -0.5616616987316885,
+        3.2933439448206485,
+        -0.06547618976504566
+      ],
+      "candidate_translation_m": [
+        -0.5616616987316885,
+        3.2933439448206485,
+        -0.06547618976504566
+      ],
+      "truth_translation_m": [
+        -0.03936198052262063,
+        -0.008720252753420777,
+        -0.02565581543899005
+      ],
+      "prior_to_candidate_mm": 0.0,
+      "candidate_residual_equations": 0,
+      "initial_singular_values": [],
+      "reported_initial_condition": null,
+      "prior_huber": null,
+      "final_huber": null,
+      "final_residual_rms_px": null,
+      "rechecked_rank": 0,
+      "rechecked_normalized_min_eigenvalue": 0.0,
+      "rechecked_normalized_condition": null,
+      "rechecked_view_support": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "cameras": [
+        {
+          "name": "front",
+          "fault_active": false,
+          "input_corner_count": 7,
+          "input_edge_count": 7,
+          "prior_visible_model_corner_count": 7,
+          "prior_visible_model_edge_count": 9,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 8,
+          "pose_min_depth_m": 3.8451412982452555,
+          "pose_max_depth_m": 4.041546591396042,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "side",
+          "fault_active": false,
+          "input_corner_count": 8,
+          "input_edge_count": 8,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 1.0996214204789783,
+          "pose_max_depth_m": 1.3237019769843987,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "top",
+          "fault_active": false,
+          "input_corner_count": 6,
+          "input_edge_count": 10,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 0.6369747516691892,
+          "pose_max_depth_m": 0.7939776278609022,
+          "corners": [],
+          "edges": []
+        },
+        {
+          "name": "diagonal",
+          "fault_active": false,
+          "input_corner_count": 9,
+          "input_edge_count": 9,
+          "prior_visible_model_corner_count": 0,
+          "prior_visible_model_edge_count": 0,
+          "output_vertices_in_front": 8,
+          "output_vertices_inside": 0,
+          "pose_min_depth_m": 3.287638494494452,
+          "pose_max_depth_m": 3.491010038982745,
+          "corners": [],
+          "edges": []
+        }
+      ]
+    }
+  ]
+}
