@@ -27,4 +27,4 @@ segmentation = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["capture*", "rig*", "perception*", "pose*", "evaluation*", "experiments*", "tools*"]
+include = ["capture*", "rig*", "perception*", "pose*", "learning*", "evaluation*", "experiments*", "tools*"]

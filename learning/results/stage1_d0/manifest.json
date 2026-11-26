@@ -1,0 +1,129 @@
+{
+  "dataset": "D0",
+  "split": "lockbox",
+  "smoke": false,
+  "trials": [
+    {
+      "id": "D0-lockbox-76400",
+      "seed": 76400,
+      "regime": "clean",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76401",
+      "seed": 76401,
+      "regime": "wrong_association",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76402",
+      "seed": 76402,
+      "regime": "unequal_quality",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76403",
+      "seed": 76403,
+      "regime": "occlusion",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76404",
+      "seed": 76404,
+      "regime": "missing",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76405",
+      "seed": 76405,
+      "regime": "extrinsics",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76406",
+      "seed": 76406,
+      "regime": "time_skew",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76407",
+      "seed": 76407,
+      "regime": "simultaneous",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76497",
+      "seed": 76497,
+      "regime": "clean",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76498",
+      "seed": 76498,
+      "regime": "wrong_association",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76499",
+      "seed": 76499,
+      "regime": "unequal_quality",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76500",
+      "seed": 76500,
+      "regime": "occlusion",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76501",
+      "seed": 76501,
+      "regime": "missing",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76502",
+      "seed": 76502,
+      "regime": "extrinsics",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76503",
+      "seed": 76503,
+      "regime": "time_skew",
+      "motion": "orbit_with_reversal"
+    },
+    {
+      "id": "D0-lockbox-76504",
+      "seed": 76504,
+      "regime": "simultaneous",
+      "motion": "orbit_with_reversal"
+    }
+  ],
+  "methods": [
+    "all",
+    "best",
+    "cross",
+    "cross_verify",
+    "cross_alternating",
+    "recovery",
+    "adaptive_nonlearning"
+  ],
+  "oracles": [
+    "gt_correspondence",
+    "gt_hypothesis_selection",
+    "gt_measurement_weighting",
+    "gt_initialization"
+  ],
+  "initial": "one perturbed first-pose initialization; exact first frame only for gt_initialization",
+  "success_limits_mm_deg": [
+    20.0,
+    8.0
+  ],
+  "frames_per_trial": 12,
+  "tool": "CPU only",
+  "subprocess_peak_working_set_mib": 50.2734375,
+  "prior": "method-local causal rollout",
+  "gt_hypothesis_cost": "(translation_mm/20)^2 + (rotation_deg/8)^2",
+  "gt_weighting": "binary healthy/fault mask; does not change feature association"
+}

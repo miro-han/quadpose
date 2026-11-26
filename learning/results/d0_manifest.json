@@ -1,0 +1,113 @@
+{
+  "dataset": "D0",
+  "verified": "Hashes, disjoint trajectory seeds, archive joins and padding masks",
+  "splits": {
+    "train": {
+      "frames": 288,
+      "trajectory_count": 24,
+      "seeds": [
+        72200,
+        72201,
+        72202,
+        72203,
+        72204,
+        72205,
+        72206,
+        72207,
+        72297,
+        72298,
+        72299,
+        72300,
+        72301,
+        72302,
+        72303,
+        72304,
+        72394,
+        72395,
+        72396,
+        72397,
+        72398,
+        72399,
+        72400,
+        72401
+      ],
+      "motion_families": [
+        "harmonic_sweep"
+      ],
+      "available_valid_hypothesis_frames": 126,
+      "hashes": {
+        "index.npz": "d4d5e5c5c9f5bfd86c9ab1e862f8d5f506748ddb6e9b2c14770eb955331495a8",
+        "inputs.npz": "879181cd26a9ac6843a64f26906e888d414a6d3a70a4ad92286b37ab43fd09f9",
+        "observations.npz": "925554467aa2ae23431f8132cc2a02dfb5569b9aa60c2e89a14934052133a34e",
+        "target_provenance.json": "713c39569b8348e66add319116aeed965d863667bfb3159dadfe5c49eddda26a",
+        "targets.npz": "161f31661c7c16550d81498ae0f284050d7cb3eea037a810aeb07297ca5841cd"
+      }
+    },
+    "dev": {
+      "frames": 192,
+      "trajectory_count": 16,
+      "seeds": [
+        74100,
+        74101,
+        74102,
+        74103,
+        74104,
+        74105,
+        74106,
+        74107,
+        74197,
+        74198,
+        74199,
+        74200,
+        74201,
+        74202,
+        74203,
+        74204
+      ],
+      "motion_families": [
+        "phase_shifted_arc"
+      ],
+      "available_valid_hypothesis_frames": 140,
+      "hashes": {
+        "index.npz": "31ef9c1953a3b28e6dfd91d52e74dc2e2dc4e326213c2d86aa746a042b494ee1",
+        "inputs.npz": "a2f997f3e9d7c7024128d17e572de5dc0ada54ee57210349716185e1668263f5",
+        "observations.npz": "68a80cce781fcbef862b87da3928f0b74cbe53814c1cd4390fc72105c1b2148d",
+        "target_provenance.json": "38f711a5e690885e89a1559be00f88d986882d7e2246d6852d6f594939a57897",
+        "targets.npz": "83ad8b25b392e594078f0d3d765eb21c2a231874bcee5ab25cdde46b1aa6be64"
+      }
+    },
+    "lockbox": {
+      "frames": 192,
+      "trajectory_count": 16,
+      "seeds": [
+        76400,
+        76401,
+        76402,
+        76403,
+        76404,
+        76405,
+        76406,
+        76407,
+        76497,
+        76498,
+        76499,
+        76500,
+        76501,
+        76502,
+        76503,
+        76504
+      ],
+      "motion_families": [
+        "orbit_with_reversal"
+      ],
+      "available_valid_hypothesis_frames": 82,
+      "hashes": {
+        "index.npz": "14d904982334a7a808dc5c7dbba7533d8da0e7f1870e3783f01edd1ecea1ea3b",
+        "inputs.npz": "f8294f2915b755cbc69886bbf4d0b6cf28fb947d5f13b06c45b5c5e236b3838e",
+        "observations.npz": "6727a8c18f8d550b8eca596bfc21674f02f1095ae8fd1fcdaa2539b891e07f28",
+        "target_provenance.json": "7ffbe3ced6dde323fb3d9f5b7b69712a20154183af7a2fc070ee1b733396177f",
+        "targets.npz": "7526c00e054c04fa74a25e548134cf8b373a36ea6a32ffb775a4d9d4611ed104"
+      }
+    }
+  }
+}
