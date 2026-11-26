@@ -3,6 +3,7 @@ import argparse
 from collections import Counter
 import copy
 import csv
+import hashlib
 import json
 from pathlib import Path
 from time import perf_counter
@@ -79,6 +80,8 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--limit", type=int, default=12, help="maximum trials per split")
     parser.add_argument("--seed", type=int, default=83)
+    parser.add_argument("--eval-split", choices=("dev", "lockbox"), default="dev")
+    parser.add_argument("--resume-rl", type=Path, help="Warm-start RL from a previous policy study checkpoint")
     args = parser.parse_args()
     if args.output.exists():
         parser.error("Use a new output path")
@@ -88,7 +91,7 @@ def main():
     torch.manual_seed(args.seed)
     from itertools import islice
     train = list(islice(iter_trials("train"), args.limit))
-    dev = list(islice(iter_trials("dev"), args.limit))
+    evaluation = list(islice(iter_trials(args.eval_split), args.limit))
     started = perf_counter()
     _, samples, _ = run(train, collect=True)
     generation_seconds = perf_counter() - started
@@ -108,6 +111,8 @@ def main():
         losses.append(loss.item())
     bc_seconds = perf_counter() - started
     rl = copy.deepcopy(model)
+    if args.resume_rl is not None:
+        rl.load_state_dict(torch.load(args.resume_rl, map_location="cpu", weights_only=True))
     optimizer = torch.optim.Adam(rl.parameters(), lr=.002)
     started = perf_counter()
     rl_losses = []
@@ -125,18 +130,20 @@ def main():
     reports = {}
     for name,policy in (("heuristic",None),("all_camera_velocity",None),("behavior_cloning",model),("reinforce",rl)):
         with torch.no_grad():
-            rows, _, _ = run(dev, policy, all_camera=name=="all_camera_velocity")
+            rows, _, _ = run(evaluation, policy, all_camera=name=="all_camera_velocity")
         with (args.output / (name+".csv")).open("w", newline="", encoding="utf-8") as stream:
             writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
             writer.writeheader()
             writer.writerows(rows)
         reports[name] = summary(rows)
     details = dict(schema="quadpose-policy-v0", seed=args.seed, train=[x.id for x in train],
-                   dev=[x.id for x in dev], actions=ACTIONS, losses=losses, rl_losses=rl_losses,
+                   evaluation_split=args.eval_split, evaluation=[x.id for x in evaluation],
+                   actions=ACTIONS, losses=losses, rl_losses=rl_losses,
                    rl_train_reward=train_rewards, generation_seconds=generation_seconds,
                    bc_seconds=bc_seconds, rl_seconds=rl_seconds,
+                   parent_checkpoint_sha256=(hashlib.sha256(args.resume_rl.read_bytes()).hexdigest()
+                                             if args.resume_rl is not None else None),
                    parameters=sum(p.numel() for p in model.parameters()), results=reports)
-    import hashlib
     for name, network in (("behavior_cloning",model),("reinforce",rl)):
         checkpoint = args.output / (name+".pt")
         torch.save(network.state_dict(), checkpoint)
