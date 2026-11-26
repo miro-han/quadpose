@@ -1,0 +1,33 @@
+{
+  "source_local_path": "outputs/neural/residual_v1/summary.json",
+  "source_sha256": "6afd8d03c11bb4fd047a25bf18c1f14be83aa1ceb1f23ce855925844924bad87",
+  "implementation": "experiments/neural/residual_study.py",
+  "seed": 907,
+  "generation_seconds": 18.11335460000555,
+  "train_rows": 156,
+  "dev_rows": 148,
+  "supervised_resource_measurement": {
+    "supervised": {
+      "conditional_frames": 148,
+      "rows": 156,
+      "seconds": 0.145670700003393,
+      "correction_p95_ms": 0.37986999232089147,
+      "translation_rmse_mm": 5.763206662160508,
+      "translation_p95_mm": 10.629373740397849,
+      "worsened_pct": 91.21621621621621,
+      "full_batch_epochs": 100
+    },
+    "supervised_cuda": {
+      "conditional_frames": 148,
+      "rows": 156,
+      "seconds": 0.5661646999942604,
+      "correction_p95_ms": 1.20964499656111,
+      "torch_peak_allocated_mib": 17.35693359375,
+      "translation_rmse_mm": 5.763225412210711,
+      "translation_p95_mm": 10.629310384683219,
+      "worsened_pct": 91.21621621621621,
+      "full_batch_epochs": 100
+    }
+  },
+  "geometry_reference_translation_rmse_mm": 3.7964487799185958
+}

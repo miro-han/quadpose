@@ -66,4 +66,3 @@ def utility(pose, status, truth, action):
 
 def heuristic(mask):
     return 1 if mask[1] else 3 if mask[3] else 0 if mask[0] else 4
-
