@@ -1,5 +1,6 @@
 """D0 behavior cloning vs sequential policy gradients on action-conditioned replay."""
 import argparse
+from collections import Counter
 import copy
 import csv
 import json
@@ -13,7 +14,7 @@ import torch
 from torch import nn
 
 
-def run(trials, model=None, *, collect=False, explore=False):
+def run(trials, model=None, *, collect=False, explore=False, all_camera=False):
     records, train_rows, episode_losses = [], [], []
     for trial in trials:
         state = State(((-1/30, trial.initial),))
@@ -25,7 +26,7 @@ def run(trials, model=None, *, collect=False, explore=False):
             args = (stamp, trial.rig, frame.detections, trial.box)
             decision_start = perf_counter()
             if model is None:
-                a = heuristic(mask)
+                a = (0 if mask[0] else 4) if all_camera else heuristic(mask)
             else:
                 logits = model(torch.as_tensor(x, dtype=torch.float32)).masked_fill(~torch.as_tensor(mask), -1e8)
                 distribution = torch.distributions.Categorical(logits=logits)
@@ -69,7 +70,8 @@ def summary(rows):
                 translation_rmse_mm=float(np.sqrt(np.mean([x["mm"]**2 for x in rows]))),
                 rotation_rmse_deg=float(np.sqrt(np.mean([x["deg"]**2 for x in rows]))),
                 backend_p95_ms=float(np.quantile([x["latency_ms"] for x in rows],.95)),
-                decision_p95_ms=float(np.quantile([x["decision_ms"] for x in rows],.95)))
+                decision_p95_ms=float(np.quantile([x["decision_ms"] for x in rows],.95)),
+                actions=dict(Counter(row["action"] for row in rows)))
 
 
 def main():
@@ -121,9 +123,9 @@ def main():
     rl_seconds = perf_counter() - started
     args.output.mkdir(parents=True)
     reports = {}
-    for name,policy in (("heuristic",None),("behavior_cloning",model),("reinforce",rl)):
+    for name,policy in (("heuristic",None),("all_camera_velocity",None),("behavior_cloning",model),("reinforce",rl)):
         with torch.no_grad():
-            rows, _, _ = run(dev, policy)
+            rows, _, _ = run(dev, policy, all_camera=name=="all_camera_velocity")
         with (args.output / (name+".csv")).open("w", newline="", encoding="utf-8") as stream:
             writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
             writer.writeheader()
@@ -134,7 +136,6 @@ def main():
                    rl_train_reward=train_rewards, generation_seconds=generation_seconds,
                    bc_seconds=bc_seconds, rl_seconds=rl_seconds,
                    parameters=sum(p.numel() for p in model.parameters()), results=reports)
-    (args.output / "summary.json").write_text(json.dumps(details, indent=2), encoding="utf-8")
     import hashlib
     for name, network in (("behavior_cloning",model),("reinforce",rl)):
         checkpoint = args.output / (name+".pt")
