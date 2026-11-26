@@ -1,0 +1,335 @@
+/* CompactControls: CompactSelector, CompactAction, CompactPill, CompactSegmented */
+.miro-compact-selector-wrap,
+.miro-root .compact-selector-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.miro-compact-selector-trigger,
+.miro-compact-action,
+.miro-compact-pill,
+.miro-root .compact-selector-trigger,
+.miro-root .compact-action,
+.miro-root .compact-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--miro-space-2);
+  height: var(--miro-compact-control-height);
+  padding: 0 var(--miro-space-3);
+  border: none;
+  background: transparent;
+  border-radius: var(--miro-compact-control-radius);
+  font-family: var(--miro-ui-family);
+  font-size: var(--miro-compact-label-size, 0.6875rem);
+  font-weight: var(--miro-compact-label-weight, 600);
+  line-height: 1;
+  color: var(--miro-text);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition:
+    color var(--miro-motion-fast) var(--miro-ease-standard),
+    background-color var(--miro-motion-fast) var(--miro-ease-standard),
+    transform var(--miro-motion-instant) var(--miro-ease-standard),
+    box-shadow var(--miro-motion-fast) var(--miro-ease-standard);
+}
+
+.miro-compact-action.miro-icon-only,
+.miro-compact-action.icon-only,
+.miro-root .compact-action.icon-only {
+  width: var(--miro-compact-control-height);
+  padding: 0;
+}
+
+.miro-compact-selector-trigger > .miro-compact-selector-label,
+.miro-compact-action > .miro-compact-action-label,
+.miro-compact-pill > .miro-compact-pill-label,
+.miro-root .compact-selector-trigger > .compact-selector-label,
+.miro-root .compact-action > .compact-action-label,
+.miro-root .compact-pill > .compact-pill-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--miro-space-2);
+}
+
+.miro-compact-selector-label > svg,
+.miro-compact-action-label > svg,
+.miro-compact-pill-label > svg,
+.miro-compact-action > svg,
+.miro-compact-pill > svg,
+.miro-compact-segmented-item > svg,
+.miro-root .compact-selector-label > svg,
+.miro-root .compact-action-label > svg,
+.miro-root .compact-pill-label > svg,
+.miro-root .compact-action > svg,
+.miro-root .compact-pill > svg,
+.miro-root .compact-segmented-item > svg {
+  width: var(--miro-compact-icon-size, 14px);
+  height: var(--miro-compact-icon-size, 14px);
+  flex-shrink: 0;
+}
+
+.miro-compact-selector-caret,
+.miro-root .compact-selector-caret {
+  color: var(--miro-muted);
+  transition:
+    transform var(--miro-motion-fast) var(--miro-ease-out),
+    color var(--miro-motion-fast) var(--miro-ease-standard);
+}
+
+.miro-compact-selector-trigger[aria-expanded="true"] .miro-compact-selector-caret,
+.miro-root .compact-selector-trigger[aria-expanded="true"] .compact-selector-caret {
+  transform: rotate(180deg);
+  color: var(--miro-text);
+}
+
+.miro-compact-selector-trigger:hover:not(:disabled),
+.miro-compact-action:hover:not(:disabled),
+.miro-root .compact-selector-trigger:hover:not(:disabled),
+.miro-root .compact-action:hover:not(:disabled) {
+  color: var(--miro-text);
+  background: var(--miro-compact-selection-fill, color-mix(in srgb, var(--miro-text) 8%, transparent));
+}
+
+.miro-compact-selector-trigger.material-flat:hover:not(:disabled),
+.miro-compact-action.material-flat:hover:not(:disabled),
+.miro-root .compact-selector-trigger.material-flat:hover:not(:disabled),
+.miro-root .compact-action.material-flat:hover:not(:disabled) {
+  background: var(--miro-compact-selection-fill, color-mix(in srgb, var(--miro-text) 8%, transparent));
+}
+
+.miro-compact-selector-trigger:active:not(:disabled),
+.miro-compact-action:active:not(:disabled),
+.miro-root .compact-selector-trigger:active:not(:disabled),
+.miro-root .compact-action:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+.miro-compact-selector-trigger:disabled,
+.miro-compact-action:disabled,
+.miro-compact-action[data-disabled="true"],
+.miro-root .compact-selector-trigger:disabled,
+.miro-root .compact-action:disabled,
+.miro-root .compact-action[data-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.miro-compact-action[data-active="true"],
+.miro-root .compact-action[data-active="true"] {
+  color: var(--miro-accent);
+}
+
+.miro-compact-action[data-tone="danger"],
+.miro-root .compact-action[data-tone="danger"] {
+  color: var(--miro-danger);
+}
+
+.miro-compact-selector-trigger:focus-visible,
+.miro-compact-action:focus-visible,
+.miro-compact-pill:focus-visible,
+.miro-root .compact-selector-trigger:focus-visible,
+.miro-root .compact-action:focus-visible,
+.miro-root .compact-pill:focus-visible {
+  outline: none;
+  box-shadow: 0 0 9px color-mix(in srgb, var(--miro-accent) 35%, transparent);
+  background-color: var(--miro-soft);
+  color: var(--miro-text);
+}
+
+/* CompactSelector popover menu */
+.miro-compact-selector-menu,
+.miro-root .compact-selector-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 11rem;
+  padding: var(--miro-space-1);
+  border-radius: var(--miro-radius-popover);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transform-origin: top left;
+  animation: miroCompactMenuEnter var(--miro-popover-enter) var(--miro-ease-out);
+}
+
+.miro-compact-selector-menu[data-align="end"],
+.miro-root .compact-selector-menu[data-align="end"] {
+  left: auto;
+  right: 0;
+  transform-origin: top right;
+}
+
+@keyframes miroCompactMenuEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.miro-compact-selector-option,
+.miro-root .compact-selector-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--miro-space-3);
+  width: 100%;
+  min-height: 1.95rem;
+  padding: 0 var(--miro-space-3);
+  border: none;
+  border-radius: var(--miro-radius-floating-row);
+  background: transparent;
+  color: var(--miro-text);
+  font-family: var(--miro-ui-family);
+  font-size: var(--miro-type-ui);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color var(--miro-motion-fast) var(--miro-ease-standard),
+    color var(--miro-motion-fast) var(--miro-ease-standard);
+}
+
+.miro-compact-selector-option:hover:not(:disabled),
+.miro-compact-selector-option[data-highlighted="true"],
+.miro-root .compact-selector-option:hover:not(:disabled),
+.miro-root .compact-selector-option[data-highlighted="true"] {
+  background: var(--miro-soft);
+}
+
+.miro-compact-selector-option[aria-selected="true"],
+.miro-root .compact-selector-option[aria-selected="true"] {
+  background: var(--miro-accent-soft);
+  color: var(--miro-text);
+  font-weight: 500;
+}
+
+.miro-compact-selector-option:disabled,
+.miro-root .compact-selector-option:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.miro-compact-selector-option:focus-visible,
+.miro-root .compact-selector-option:focus-visible {
+  outline: none;
+  box-shadow: 0 0 9px color-mix(in srgb, var(--miro-accent) 35%, transparent);
+  background-color: var(--miro-soft);
+  color: var(--miro-text);
+}
+
+.miro-compact-selector-option-meta,
+.miro-root .compact-selector-option-meta {
+  font-size: var(--miro-type-small);
+  color: var(--miro-muted);
+}
+
+/* Segmented Capsule Control with sliding thumb */
+.miro-compact-segmented,
+.miro-root .compact-segmented {
+  position: relative;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 2px;
+  align-items: center;
+  height: var(--miro-compact-control-height);
+  padding: var(--miro-compact-control-inset);
+  border-radius: var(--miro-compact-control-radius);
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.miro-compact-segmented > .miro-compact-segmented-thumb,
+.miro-compact-segmented-thumb,
+.miro-root .compact-segmented > .compact-segmented-thumb,
+.miro-root .compact-segmented-thumb {
+  position: absolute;
+  top: var(--miro-compact-control-inset);
+  bottom: var(--miro-compact-control-inset);
+  left: var(--miro-compact-control-inset);
+  border-radius: var(--miro-compact-control-radius);
+  background: var(--miro-compact-selection-fill, color-mix(in srgb, var(--miro-text) 8%, transparent));
+  border: 1px solid var(--miro-compact-selection-edge, var(--miro-selector-edge));
+  box-shadow: none;
+  pointer-events: none;
+  z-index: 1;
+  box-sizing: border-box;
+  transition:
+    transform var(--miro-motion-selection) var(--miro-ease-selection),
+    width var(--miro-motion-selection) var(--miro-ease-selection);
+}
+
+.miro-compact-segmented-item,
+.miro-root .compact-segmented-item {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--miro-space-1);
+  height: 100%;
+  padding: 0 var(--miro-space-3);
+  border: none;
+  border-radius: var(--miro-compact-control-radius);
+  background: transparent;
+  color: var(--miro-muted);
+  font-family: var(--miro-ui-family);
+  font-size: var(--miro-compact-label-size, 0.6875rem);
+  font-weight: var(--miro-compact-label-weight, 600);
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    color var(--miro-motion-fast) var(--miro-ease-standard),
+    background-color var(--miro-motion-fast) var(--miro-ease-standard);
+}
+
+.miro-compact-segmented-item:hover:not(:disabled),
+.miro-root .compact-segmented-item:hover:not(:disabled) {
+  color: var(--miro-text);
+  background: var(--miro-compact-selection-fill, color-mix(in srgb, var(--miro-text) 8%, transparent));
+}
+
+.miro-compact-segmented-item[aria-selected="true"],
+.miro-compact-segmented-item[aria-pressed="true"],
+.miro-root .compact-segmented-item[aria-selected="true"],
+.miro-root .compact-segmented-item[aria-pressed="true"] {
+  color: var(--miro-text);
+}
+
+.miro-compact-segmented-item:disabled,
+.miro-root .compact-segmented-item:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.miro-compact-segmented-item:focus-visible,
+.miro-root .compact-segmented-item:focus-visible {
+  outline: none;
+  box-shadow: 0 0 9px color-mix(in srgb, var(--miro-accent) 35%, transparent);
+  background-color: var(--miro-soft);
+  color: var(--miro-text);
+}
+
+@media (forced-colors: active) {
+  .miro-compact-selector-trigger:focus-visible,
+  .miro-compact-action:focus-visible,
+  .miro-compact-pill:focus-visible,
+  .miro-compact-selector-option:focus-visible,
+  .miro-compact-segmented-item:focus-visible,
+  .miro-root .compact-selector-trigger:focus-visible,
+  .miro-root .compact-action:focus-visible,
+  .miro-root .compact-pill:focus-visible,
+  .miro-root .compact-selector-option:focus-visible,
+  .miro-root .compact-segmented-item:focus-visible {
+    outline: 1px solid Highlight;
+  }
+}

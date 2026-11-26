@@ -1,0 +1,662 @@
+{
+  "pid": 11340,
+  "cv": "5.0.0",
+  "runtime": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\amdocl.inf_amd64_7b4e64250e49ad58\\amdocl64.dll",
+  "opencl_device": "gfx1035",
+  "vendor": "Advanced Micro Devices, Inc.",
+  "driver": "3570.0 (PAL,LC)",
+  "adapters": [
+    {
+      "index": 0,
+      "description": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "vendor": "0x10de",
+      "device": "0x2560",
+      "luid": "0x00000000_0x00011d84",
+      "dedicated_video_mib": 5994.0,
+      "shared_system_mib": 15970.35546875
+    },
+    {
+      "index": 1,
+      "description": "AMD Radeon(TM) Graphics",
+      "vendor": "0x1002",
+      "device": "0x1681",
+      "luid": "0x00000000_0x0001386d",
+      "dedicated_video_mib": 485.796875,
+      "shared_system_mib": 15970.35546875
+    },
+    {
+      "index": 2,
+      "description": "Microsoft Basic Render Driver",
+      "vendor": "0x1414",
+      "device": "0x008c",
+      "luid": "0x00000000_0x000137f0",
+      "dedicated_video_mib": 0.0,
+      "shared_system_mib": 15970.35546875
+    }
+  ],
+  "threads": 1,
+  "process_memory_cap_gib": 4,
+  "peak_working_set_mib": 270.75390625,
+  "process_local_nonlocal_bytes": {
+    "start": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        0,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "blur_cpu": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        104636416,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "blur_amd_resident": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        124510208,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "blur_amd_roundtrip": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        124510208,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "canny_cpu": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        124510208,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "canny_amd_resident": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        125493248,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "canny_amd_roundtrip": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        125493248,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "morph_close_cpu": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        125493248,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "morph_close_amd_resident": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        125493248,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "morph_close_amd_roundtrip": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        125493248,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "pyr_lk_cpu": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        125493248,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "pyr_lk_amd_resident": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        146530304,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "pyr_lk_amd_roundtrip": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        146530304,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "chain_cpu": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        146530304,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "chain_amd_resident": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        146530304,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "chain_amd_roundtrip": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        146530304,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    }
+  },
+  "engine_counter_issue": null,
+  "results": {
+    "blur": {
+      "cpu": {
+        "repeats": 235,
+        "p50_ms": 3.4061,
+        "p95_ms": 4.23054,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 0.0,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 0.0,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      },
+      "amd_resident": {
+        "repeats": 508,
+        "p50_ms": 1.5136500000000002,
+        "p95_ms": 2.0117499999999997,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 19.21490526366953,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 35.43804230719967,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "pixel_agreement": 0.9996330054012346,
+        "mean_abs_difference": 0.0003669945987654321
+      },
+      "amd_roundtrip": {
+        "repeats": 193,
+        "p50_ms": 3.7942,
+        "p95_ms": 6.157779999999999,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 24.799515983232347,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 15.264708371152274,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "pixel_agreement": 0.9996330054012346,
+        "mean_abs_difference": 0.0003669945987654321
+      }
+    },
+    "canny": {
+      "cpu": {
+        "repeats": 68,
+        "p50_ms": 11.64685,
+        "p95_ms": 13.563469999999999,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 0.0,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 0.0,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      },
+      "amd_resident": {
+        "repeats": 485,
+        "p50_ms": 1.6269,
+        "p95_ms": 1.83802,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 0.0,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 69.65995433388844,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      },
+      "amd_roundtrip": {
+        "repeats": 205,
+        "p50_ms": 3.8281,
+        "p95_ms": 4.863999999999999,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 17.235286256859247,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 30.79224519719355,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      }
+    },
+    "morph_close": {
+      "cpu": {
+        "repeats": 310,
+        "p50_ms": 2.6057,
+        "p95_ms": 3.03847,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 0.0,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 0.0,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      },
+      "amd_resident": {
+        "repeats": 524,
+        "p50_ms": 1.4674,
+        "p95_ms": 1.9264449999999997,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 0.0,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 45.12807139358646,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      },
+      "amd_roundtrip": {
+        "repeats": 215,
+        "p50_ms": 3.6273,
+        "p95_ms": 4.57093,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 17.173294152332062,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 19.050260744103333,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      }
+    },
+    "pyr_lk": {
+      "cpu": {
+        "repeats": 32,
+        "p50_ms": 25.53315,
+        "p95_ms": 27.92543,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 0.0,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 0.0,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "common_valid": 300,
+        "status_agreement": 1.0,
+        "median_endpoint_delta_px": 0.0
+      },
+      "amd_resident": {
+        "repeats": 162,
+        "p50_ms": 4.6652000000000005,
+        "p95_ms": 5.69901,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 4.739636348703644,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 43.92874562101622,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "common_valid": 300,
+        "status_agreement": 1.0,
+        "median_endpoint_delta_px": 0.0022111835423856974
+      },
+      "amd_roundtrip": {
+        "repeats": 109,
+        "p50_ms": 7.0413,
+        "p95_ms": 8.62036,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 15.220468401094218,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 31.16492567790679,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "common_valid": 300,
+        "status_agreement": 1.0,
+        "median_endpoint_delta_px": 0.0022111835423856974
+      }
+    },
+    "chain": {
+      "cpu": {
+        "repeats": 46,
+        "p50_ms": 17.546149999999997,
+        "p95_ms": 20.59505,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 0.0,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 0.0,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      },
+      "amd_resident": {
+        "repeats": 171,
+        "p50_ms": 4.5826,
+        "p95_ms": 5.4759,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 6.8250941580538225,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 51.7862116414089,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      },
+      "amd_roundtrip": {
+        "repeats": 116,
+        "p50_ms": 6.8355,
+        "p95_ms": 8.042775,
+        "process_gpu_engines_pct": {
+          "0x00000000_0x0001386d": {
+            "3d": 0.0,
+            "video codec 0": 0.0,
+            "copy": 14.448348951429846,
+            "timer 0": 0.0,
+            "security 1": 0.0,
+            "high priority 3d": 0.0,
+            "high priority compute": 0.0,
+            "true audio 0": 0.0,
+            "true audio 1": 0.0,
+            "compute 3": 0.0,
+            "compute 0": 0.0,
+            "compute 1": 35.878143177150726,
+            "video jpeg": 0.0,
+            "video decode 1": 0.0
+          }
+        },
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      }
+    }
+  },
+  "shape": [
+    1080,
+    1920
+  ],
+  "lk_points": 300
+}

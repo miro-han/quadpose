@@ -1,0 +1,17 @@
+method,layout,regime,seed,recovered,onset_frames,onset_ms
+single_legacy,upper_rear,combined,41011,False,,
+single_gated,upper_rear,combined,41011,False,,
+single_hungarian,upper_rear,combined,41011,False,,
+single_topology,upper_rear,combined,41011,False,,
+single_full,upper_rear,combined,41011,False,,
+remove,upper_rear,combined,41011,False,,
+reassign,upper_rear,combined,41011,True,2,66.66666666666667
+alternate,upper_rear,combined,41011,False,,
+single_legacy,upper_rear,combined,41039,False,,
+single_gated,upper_rear,combined,41039,True,0,0.0
+single_hungarian,upper_rear,combined,41039,True,0,0.0
+single_topology,upper_rear,combined,41039,True,0,0.0
+single_full,upper_rear,combined,41039,False,,
+remove,upper_rear,combined,41039,True,0,0.0
+reassign,upper_rear,combined,41039,True,0,0.0
+alternate,upper_rear,combined,41039,True,0,0.0

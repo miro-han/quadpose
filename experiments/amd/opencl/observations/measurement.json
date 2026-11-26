@@ -1,0 +1,118 @@
+{
+  "mode": "paired_cpu_amd_umat",
+  "amd": {
+    "available": true,
+    "device": "gfx1035",
+    "vendor": "Advanced Micro Devices, Inc.",
+    "driver": "3570.0 (PAL,LC)",
+    "runtime": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\amdocl.inf_amd64_7b4e64250e49ad58\\amdocl64.dll"
+  },
+  "opencv": "5.0.0",
+  "video": "data\\sample_videos\\WIN_20261124_20_05_34_Pro.mp4",
+  "sam_archive": "outputs\\segmentation\\20261124_215925_8f211c",
+  "lsd_archive": "outputs\\edges\\lsd_baseline",
+  "frames": 30,
+  "repeats": 5,
+  "warmup": "one untimed preloaded clip per mode",
+  "threads": 1,
+  "memory_cap_gib": 3,
+  "timing_unit": "milliseconds per 30-frame clip",
+  "scope": "Shared files and CPU geometry; AMD UMat only for selected Canny path, including transfers and synchronization",
+  "excluded": [
+    "SAM inference",
+    "LSD extraction",
+    "calibration",
+    "multi-camera fusion"
+  ],
+  "agreement_comparison": "cpu_vs_amd",
+  "agreement": {
+    "pixel_agreement": 0.9999995659722222,
+    "edge_foreground_iou": 0.9996918617258026,
+    "cpu_exact_archived_edge_frames": 30,
+    "segment_candidate_id_iou": 1.0,
+    "segment_reason_agreement": 1.0,
+    "corner_count_cpu": 134,
+    "corner_count_comparison": 134,
+    "corner_frames_exact": 30,
+    "matched_corners_within_1px": 134,
+    "corner_match_median_px": 0.0
+  },
+  "timings": {
+    "cpu": {
+      "full_clip_with_io": {
+        "wall": {
+          "p50_ms": 3902.2163,
+          "p95_ms": 3985.33188
+        },
+        "io_and_decode": {
+          "p50_ms": 1345.2227,
+          "p95_ms": 1357.54188
+        },
+        "selected_canny": {
+          "p50_ms": 534.6318,
+          "p95_ms": 546.8922
+        },
+        "cpu_filter_and_intersections": {
+          "p50_ms": 2051.8882,
+          "p95_ms": 2094.0465200000003
+        }
+      },
+      "preloaded_clip": {
+        "wall": {
+          "p50_ms": 2568.2412,
+          "p95_ms": 2593.79696
+        },
+        "io_and_decode": {
+          "p50_ms": 0.0013,
+          "p95_ms": 0.0030399999999999997
+        },
+        "selected_canny": {
+          "p50_ms": 546.0221,
+          "p95_ms": 551.64176
+        },
+        "cpu_filter_and_intersections": {
+          "p50_ms": 2015.3287,
+          "p95_ms": 2049.30142
+        }
+      }
+    },
+    "amd_umat": {
+      "full_clip_with_io": {
+        "wall": {
+          "p50_ms": 3650.7449,
+          "p95_ms": 3750.90826
+        },
+        "io_and_decode": {
+          "p50_ms": 1340.2185,
+          "p95_ms": 1368.77484
+        },
+        "selected_canny": {
+          "p50_ms": 324.1807,
+          "p95_ms": 343.41576
+        },
+        "cpu_filter_and_intersections": {
+          "p50_ms": 2001.1205,
+          "p95_ms": 2081.28708
+        }
+      },
+      "preloaded_clip": {
+        "wall": {
+          "p50_ms": 2368.5089,
+          "p95_ms": 2408.51194
+        },
+        "io_and_decode": {
+          "p50_ms": 0.001,
+          "p95_ms": 0.00258
+        },
+        "selected_canny": {
+          "p50_ms": 324.8194,
+          "p95_ms": 337.81708
+        },
+        "cpu_filter_and_intersections": {
+          "p50_ms": 2035.0278,
+          "p95_ms": 2083.02234
+        }
+      }
+    }
+  }
+}

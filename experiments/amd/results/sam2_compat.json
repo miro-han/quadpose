@@ -1,0 +1,191 @@
+{
+  "amd_adapter": {
+    "index": 1,
+    "description": "AMD Radeon(TM) Graphics",
+    "vendor": "0x1002",
+    "device": "0x1681",
+    "luid": "0x00000000_0x0001386d",
+    "dedicated_video_mib": 485.796875,
+    "shared_system_mib": 15970.35546875
+  },
+  "telemetry": {
+    "pid": 25276,
+    "pre_nvidia": {
+      "system_memory_and_utilization": "1119, 6144, 10",
+      "experiment_pid_listed": false
+    },
+    "post_nvidia": {
+      "system_memory_and_utilization": "1187, 6144, 9",
+      "experiment_pid_listed": false
+    },
+    "wddm_samples": 175,
+    "wddm_process_peak_percent": {
+      "0x00000000_0x0001386d/3d": 100.0,
+      "0x00000000_0x0001386d/video codec 0": 0.0,
+      "0x00000000_0x0001386d/copy": 0.0,
+      "0x00000000_0x0001386d/timer 0": 0.0,
+      "0x00000000_0x0001386d/security 1": 0.0,
+      "0x00000000_0x0001386d/high priority 3d": 0.0,
+      "0x00000000_0x0001386d/high priority compute": 0.0,
+      "0x00000000_0x0001386d/true audio 0": 0.0,
+      "0x00000000_0x0001386d/true audio 1": 0.0,
+      "0x00000000_0x0001386d/compute 3": 0.0,
+      "0x00000000_0x0001386d/compute 0": 0.0,
+      "0x00000000_0x0001386d/compute 1": 0.0,
+      "0x00000000_0x0001386d/video jpeg": 0.0,
+      "0x00000000_0x0001386d/video decode 1": 0.0
+    },
+    "dxgi_process_peak_local_and_nonlocal_bytes": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        323624960,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "wddm_errors": [
+      "PDH status 0xc0000bba"
+    ],
+    "amd_positive_engine_sample": true
+  },
+  "checkpoint_sha256": "7402e0d864fa82708a20fbd15bc84245c2f26dff0eb43a4b5b93452deb34be69",
+  "torch": "2.4.1+cpu",
+  "source_commit": "2b90b9f5ceec907a1c18123530e92e794ad901a4",
+  "sam_package_minimum": {
+    "torch": "2.5.1",
+    "torchvision": "0.20.1"
+  },
+  "torch_directml_wheel_requires": {
+    "torch": "2.4.1",
+    "torchvision": "0.19.1"
+  },
+  "video_cpu": {
+    "status": "two_nonempty_masks",
+    "mask_areas_pixels": [
+      87301,
+      87363
+    ],
+    "init_prompt_and_propagate_ms": 13411.053399991943
+  },
+  "video_torch_dml": "stopped_at_torch_directml_preflight",
+  "video_onnx_dml": "not_exported_stateful_video",
+  "static_onnx_components": {
+    "image_backbone_256": {
+      "input_shapes": {
+        "image": [
+          1,
+          3,
+          256,
+          256
+        ]
+      },
+      "export_warnings": [
+        "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!"
+      ],
+      "onnx_bytes": 109381305,
+      "strict": {
+        "status": "ok",
+        "strict": true,
+        "bridge": "DML1 explicit D3D12 device and queue",
+        "requested_dxgi_index": 1,
+        "requested_adapter_luid": "0x00000000_0x0001386d",
+        "provider_node_events": {
+          "DmlExecutionProvider": 1
+        },
+        "executed_ops": {
+          "DmlExecutionProvider/DmlFusedNode_0_0": 1
+        },
+        "cpu_ms": [
+          193.6699999787379,
+          230.35930001060478,
+          172.7600000158418
+        ],
+        "dml_ms": [
+          25.72969999164343,
+          26.088899991009384,
+          28.42749998671934
+        ],
+        "cpu_comparison": {
+          "max_abs": 5.4836273193359375e-06,
+          "rmse": 5.7223792282457e-07
+        }
+      }
+    },
+    "mask_decoder_1024_features": {
+      "input_shapes": {
+        "main": [
+          1,
+          256,
+          64,
+          64
+        ],
+        "fine": [
+          1,
+          32,
+          256,
+          256
+        ],
+        "middle": [
+          1,
+          64,
+          128,
+          128
+        ],
+        "position": [
+          1,
+          256,
+          64,
+          64
+        ],
+        "sparse": [
+          1,
+          3,
+          256
+        ],
+        "dense": [
+          1,
+          256,
+          64,
+          64
+        ]
+      },
+      "export_warnings": [
+        "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!"
+      ],
+      "onnx_bytes": 15798252,
+      "strict": {
+        "status": "ok",
+        "strict": true,
+        "bridge": "DML1 explicit D3D12 device and queue",
+        "requested_dxgi_index": 1,
+        "requested_adapter_luid": "0x00000000_0x0001386d",
+        "provider_node_events": {
+          "DmlExecutionProvider": 1
+        },
+        "executed_ops": {
+          "DmlExecutionProvider/DmlFusedNode_0_2": 1
+        },
+        "cpu_ms": [
+          197.06519998726435,
+          194.22560001839884,
+          191.05260001379065
+        ],
+        "dml_ms": [
+          18.21329997619614,
+          21.138299984158948,
+          19.52460000757128
+        ],
+        "cpu_comparison": {
+          "max_abs": 4.38690185546875e-05,
+          "rmse": 1.5951072782627307e-05
+        }
+      }
+    }
+  }
+}

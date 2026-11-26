@@ -1,0 +1,556 @@
+/* Utility controls, icon buttons, dialogs, utility shells, command palettes, and floating overlays */
+.miro-utility-action,
+.miro-icon-action,
+.miro-root .utility-action,
+.miro-root .icon-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--miro-space-2);
+  height: var(--miro-control-height);
+  padding: 0 var(--miro-space-3);
+  border: 1px solid transparent;
+  border-radius: var(--miro-radius-floating-row);
+  background: transparent;
+  color: var(--miro-muted);
+  font-family: var(--miro-ui-family);
+  font-size: var(--miro-type-ui);
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color var(--miro-motion-fast) var(--miro-ease-standard),
+    color var(--miro-motion-fast) var(--miro-ease-standard),
+    border-color var(--miro-motion-fast) var(--miro-ease-standard),
+    box-shadow var(--miro-motion-fast) var(--miro-ease-standard);
+}
+
+.miro-icon-action,
+.miro-root .icon-action {
+  width: var(--miro-control-height);
+  padding: 0;
+}
+
+.miro-utility-action:hover:not(:disabled),
+.miro-icon-action:hover:not(:disabled),
+.miro-root .utility-action:hover:not(:disabled),
+.miro-root .icon-action:hover:not(:disabled) {
+  background: var(--miro-soft);
+  color: var(--miro-text);
+}
+
+.miro-utility-action[data-active="true"],
+.miro-icon-action[data-active="true"],
+.miro-root .utility-action[data-active="true"],
+.miro-root .icon-action[data-active="true"] {
+  background: var(--miro-accent-soft);
+  color: var(--miro-text);
+  border-color: var(--miro-selector-edge);
+}
+
+.miro-utility-action[data-variant="solid"],
+.miro-root .utility-action[data-variant="solid"] {
+  background: var(--miro-accent);
+  color: var(--miro-panel);
+  border-color: var(--miro-accent);
+}
+
+.miro-utility-action[data-variant="solid"]:hover:not(:disabled),
+.miro-root .utility-action[data-variant="solid"]:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--miro-accent) 88%, var(--miro-text));
+  color: var(--miro-panel);
+}
+
+.miro-utility-action[data-variant="danger"],
+.miro-root .utility-action[data-variant="danger"] {
+  background: var(--miro-danger-surface);
+  color: var(--miro-danger);
+  border-color: color-mix(in srgb, var(--miro-danger) 30%, transparent);
+}
+
+.miro-utility-action:disabled,
+.miro-icon-action:disabled,
+.miro-root .utility-action:disabled,
+.miro-root .icon-action:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.miro-utility-action:focus-visible,
+.miro-icon-action:focus-visible,
+.miro-root .utility-action:focus-visible,
+.miro-root .icon-action:focus-visible {
+  outline: none;
+  box-shadow: 0 0 9px color-mix(in srgb, var(--miro-accent) 35%, transparent);
+  background-color: var(--miro-soft);
+  color: var(--miro-text);
+}
+
+/* Text inputs and search fields */
+.miro-utility-input,
+.miro-utility-select,
+.miro-utility-textarea,
+.miro-root .utility-input,
+.miro-root .utility-select,
+.miro-root .utility-textarea {
+  width: 100%;
+  min-height: var(--miro-control-height);
+  padding: 0 var(--miro-space-3);
+  border-radius: var(--miro-radius-floating-row);
+  border: 1px solid var(--miro-line);
+  background: var(--miro-panel);
+  color: var(--miro-text);
+  font-family: var(--miro-ui-family);
+  font-size: var(--miro-type-ui);
+  box-sizing: border-box;
+  transition:
+    border-color var(--miro-motion-fast) var(--miro-ease-standard),
+    box-shadow var(--miro-motion-fast) var(--miro-ease-standard);
+}
+
+.miro-utility-textarea,
+.miro-root .utility-textarea {
+  padding: var(--miro-space-2) var(--miro-space-3);
+  line-height: var(--miro-leading-ui);
+  resize: vertical;
+}
+
+.miro-utility-input::placeholder,
+.miro-utility-textarea::placeholder,
+.miro-root .utility-input::placeholder,
+.miro-root .utility-textarea::placeholder {
+  color: var(--miro-muted);
+}
+
+.miro-utility-input:focus-visible,
+.miro-utility-select:focus-visible,
+.miro-utility-textarea:focus-visible,
+.miro-root .utility-input:focus-visible,
+.miro-root .utility-select:focus-visible,
+.miro-root .utility-textarea:focus-visible {
+  outline: none;
+  border-color: var(--miro-accent);
+  box-shadow: 0 0 9px color-mix(in srgb, var(--miro-accent) 35%, transparent);
+}
+
+/* SurfaceDialog */
+.miro-surface-dialog-backdrop,
+.miro-root .surface-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--miro-space-6);
+  background: rgb(14 15 17 / 0.28);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  animation: miroBackdropFadeIn var(--miro-popover-enter) var(--miro-ease-out);
+}
+
+.miro-surface-dialog-backdrop[data-inline="true"],
+.miro-root .surface-dialog-backdrop[data-inline="true"] {
+  position: relative;
+  inset: auto;
+  z-index: 1;
+  min-height: 18rem;
+  border-radius: var(--miro-radius-panel);
+}
+
+@keyframes miroBackdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.miro-surface-dialog,
+.miro-root .surface-dialog {
+  width: min(100%, var(--miro-measure-utility));
+  max-height: min(85vh, 44rem);
+  border-radius: var(--miro-radius-dialog);
+  padding: var(--miro-space-5);
+  color: var(--miro-text);
+  display: flex;
+  flex-direction: column;
+  gap: var(--miro-space-4);
+  overflow: hidden;
+  animation: miroDialogEnter var(--miro-popover-enter) var(--miro-ease-out);
+}
+
+.miro-surface-dialog:focus-visible,
+.miro-root .surface-dialog:focus-visible {
+  outline: none;
+  box-shadow: 0 0 9px color-mix(in srgb, var(--miro-accent) 35%, transparent);
+}
+
+@keyframes miroDialogEnter {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* UtilityShell */
+.miro-utility-shell-header,
+.miro-root .utility-shell-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--miro-space-4);
+  padding-bottom: var(--miro-space-3);
+  border-bottom: 1px solid var(--miro-line);
+}
+
+.miro-utility-shell-title-group,
+.miro-root .utility-shell-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.miro-utility-shell-kicker,
+.miro-root .utility-shell-kicker {
+  font-size: var(--miro-type-meta);
+  text-transform: uppercase;
+  letter-spacing: var(--miro-tracking-index);
+  color: var(--miro-muted);
+}
+
+.miro-utility-shell-title,
+.miro-root .utility-shell-title {
+  margin: 0;
+  font-size: var(--miro-type-heading);
+  font-weight: 600;
+  color: var(--miro-text);
+}
+
+.miro-utility-shell-subtitle,
+.miro-root .utility-shell-subtitle {
+  margin: 0;
+  font-size: var(--miro-type-small);
+  color: var(--miro-muted);
+}
+
+.miro-utility-shell-body,
+.miro-root .utility-shell-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--miro-space-4);
+  overflow-y: auto;
+}
+
+.miro-utility-shell-grid,
+.miro-root .utility-shell-grid {
+  display: grid;
+  grid-template-columns: 11.5rem 1fr;
+  gap: var(--miro-space-4);
+  min-height: 16rem;
+}
+
+.miro-utility-shell-nav,
+.miro-root .utility-shell-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-right: var(--miro-space-3);
+  border-right: 1px solid var(--miro-line);
+}
+
+.miro-utility-shell-nav-item,
+.miro-root .utility-shell-nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--miro-space-2);
+  height: 2rem;
+  padding: 0 var(--miro-space-3);
+  border: none;
+  border-radius: var(--miro-radius-floating-row);
+  background: transparent;
+  color: var(--miro-muted);
+  font-family: var(--miro-ui-family);
+  font-size: var(--miro-type-ui);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color var(--miro-motion-fast) var(--miro-ease-standard),
+    color var(--miro-motion-fast) var(--miro-ease-standard);
+}
+
+.miro-utility-shell-nav-item:hover,
+.miro-root .utility-shell-nav-item:hover {
+  background: var(--miro-soft);
+  color: var(--miro-text);
+}
+
+.miro-utility-shell-nav-item[aria-selected="true"],
+.miro-utility-shell-nav-item[data-active="true"],
+.miro-root .utility-shell-nav-item[aria-selected="true"],
+.miro-root .utility-shell-nav-item[data-active="true"] {
+  background: var(--miro-accent-soft);
+  color: var(--miro-text);
+  font-weight: 500;
+}
+
+.miro-utility-shell-nav-item:focus-visible,
+.miro-root .utility-shell-nav-item:focus-visible {
+  outline: none;
+  box-shadow: 0 0 9px color-mix(in srgb, var(--miro-accent) 35%, transparent);
+  background-color: var(--miro-soft);
+  color: var(--miro-text);
+}
+
+.miro-utility-section,
+.miro-root .utility-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--miro-space-3);
+}
+
+.miro-utility-section-label,
+.miro-root .utility-section-label {
+  font-size: var(--miro-type-meta);
+  text-transform: uppercase;
+  letter-spacing: var(--miro-tracking-index);
+  color: var(--miro-muted);
+  margin: 0;
+}
+
+.miro-utility-row,
+.miro-root .utility-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--miro-space-4);
+  padding: var(--miro-space-2) 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--miro-line) 65%, transparent);
+}
+
+.miro-utility-row:last-child,
+.miro-root .utility-row:last-child {
+  border-bottom: none;
+}
+
+.miro-utility-row-info,
+.miro-root .utility-row-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.miro-utility-row-title,
+.miro-root .utility-row-title {
+  font-size: var(--miro-type-ui);
+  font-weight: 500;
+  color: var(--miro-text);
+}
+
+.miro-utility-row-desc,
+.miro-root .utility-row-desc {
+  font-size: var(--miro-type-small);
+  color: var(--miro-muted);
+}
+
+/* FloatingOverlay / Authoring Toolbox / Contextual Popover */
+.miro-floating-overlay,
+.miro-root .floating-overlay {
+  position: fixed;
+  z-index: 80;
+  border-radius: var(--miro-radius-popover);
+  padding: var(--miro-space-2);
+  animation: miroCompactMenuEnter var(--miro-popover-enter) var(--miro-ease-out);
+}
+
+.miro-floating-overlay[data-inline="true"],
+.miro-root .floating-overlay[data-inline="true"] {
+  position: relative;
+  z-index: 5;
+}
+
+.miro-floating-toolbar,
+.miro-root .floating-toolbar {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border-radius: var(--miro-radius-popover);
+}
+
+.miro-floating-toolbar-divider,
+.miro-root .floating-toolbar-divider {
+  width: 1px;
+  height: 1.15rem;
+  margin: 0 3px;
+  background: var(--miro-line);
+}
+
+/* CommandPalette / CommandIndex */
+.miro-command-palette,
+.miro-root .command-palette {
+  display: flex;
+  flex-direction: column;
+  gap: var(--miro-space-3);
+}
+
+.miro-command-search-row,
+.miro-root .command-search-row {
+  display: flex;
+  align-items: center;
+  gap: var(--miro-space-2);
+  padding: 0 var(--miro-space-3);
+  height: 2.5rem;
+  border-radius: var(--miro-radius-popover);
+  border: 1px solid var(--miro-line);
+  background: var(--miro-soft);
+}
+
+.miro-command-search-input,
+.miro-root .command-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--miro-text);
+  font-family: var(--miro-ui-family);
+  font-size: var(--miro-type-body);
+}
+
+.miro-command-search-input:focus-visible,
+.miro-root .command-search-input:focus-visible {
+  outline: none;
+}
+
+.miro-command-search-row:focus-within,
+.miro-root .command-search-row:focus-within {
+  border-color: var(--miro-accent);
+  box-shadow: 0 0 9px color-mix(in srgb, var(--miro-accent) 35%, transparent);
+}
+
+.miro-command-list,
+.miro-root .command-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 18rem;
+  overflow-y: auto;
+}
+
+.miro-command-item,
+.miro-root .command-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--miro-space-3);
+  padding: var(--miro-space-2) var(--miro-space-3);
+  border: none;
+  border-radius: var(--miro-radius-floating-row);
+  background: transparent;
+  color: var(--miro-text);
+  font-family: var(--miro-ui-family);
+  font-size: var(--miro-type-ui);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--miro-motion-fast) var(--miro-ease-standard);
+}
+
+.miro-command-item:hover:not([data-disabled="true"]),
+.miro-command-item[data-active="true"],
+.miro-root .command-item:hover:not([data-disabled="true"]),
+.miro-root .command-item[data-active="true"] {
+  background: var(--miro-accent-soft);
+}
+
+.miro-command-item[data-disabled="true"],
+.miro-command-item[aria-disabled="true"],
+.miro-root .command-item[data-disabled="true"],
+.miro-root .command-item[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.miro-command-item:focus-visible,
+.miro-root .command-item:focus-visible {
+  outline: none;
+  box-shadow: 0 0 9px color-mix(in srgb, var(--miro-accent) 35%, transparent);
+  background-color: var(--miro-soft);
+}
+
+.miro-command-shortcut,
+.miro-root .command-shortcut {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 6px;
+  border-radius: var(--miro-radius-control);
+  border: 1px solid var(--miro-line);
+  background: var(--miro-panel);
+  color: var(--miro-muted);
+  font-family: var(--miro-editor-family);
+  font-size: var(--miro-type-meta);
+}
+
+/* ZoomIndicator & Status Pill */
+.miro-zoom-indicator,
+.miro-status-pill,
+.miro-root .zoom-indicator,
+.miro-root .status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--miro-space-2);
+  height: 1.75rem;
+  padding: 0 var(--miro-space-3);
+  border-radius: var(--miro-radius-badge);
+  font-size: var(--miro-type-small);
+  font-weight: 500;
+  color: var(--miro-text);
+}
+
+.miro-status-dot,
+.miro-root .status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--miro-radius-badge);
+  background: var(--miro-muted);
+}
+
+.miro-status-dot[data-tone="success"],
+.miro-root .status-dot[data-tone="success"] {
+  background: var(--miro-success);
+}
+
+.miro-status-dot[data-tone="warning"],
+.miro-root .status-dot[data-tone="warning"] {
+  background: var(--miro-warning);
+}
+
+.miro-status-dot[data-tone="danger"],
+.miro-root .status-dot[data-tone="danger"] {
+  background: var(--miro-danger);
+}
+
+@media (forced-colors: active) {
+  .miro-utility-action:focus-visible,
+  .miro-icon-action:focus-visible,
+  .miro-utility-input:focus-visible,
+  .miro-utility-select:focus-visible,
+  .miro-utility-textarea:focus-visible,
+  .miro-utility-shell-nav-item:focus-visible,
+  .miro-command-item:focus-visible,
+  .miro-surface-dialog:focus-visible,
+  .miro-root .utility-action:focus-visible,
+  .miro-root .icon-action:focus-visible,
+  .miro-root .utility-input:focus-visible,
+  .miro-root .utility-select:focus-visible,
+  .miro-root .utility-textarea:focus-visible,
+  .miro-root .utility-shell-nav-item:focus-visible,
+  .miro-root .command-item:focus-visible,
+  .miro-root .surface-dialog:focus-visible {
+    outline: 1px solid Highlight;
+  }
+}

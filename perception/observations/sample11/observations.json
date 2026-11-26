@@ -1,0 +1,1938 @@
+{
+  "schema_version": 1,
+  "video": "WIN_20261124_20_05_34_Pro.mp4",
+  "session": "20261124_215508_e1cb28",
+  "camera_id": "camera_1",
+  "source_frame": 11,
+  "aligned_time_ns": null,
+  "pixel_space": "raw_distorted_pixels",
+  "calibration_id": null,
+  "corners": [
+    {
+      "local_id": 0,
+      "xy": [
+        963.2245463250711,
+        528.6261520508167
+      ],
+      "parents": [
+        [
+          0,
+          37
+        ],
+        [
+          3,
+          37
+        ]
+      ],
+      "model_id": null,
+      "reason": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 1,
+      "xy": [
+        962.7962808196514,
+        512.9767773476631
+      ],
+      "parents": [
+        [
+          0,
+          38
+        ],
+        [
+          3,
+          38
+        ],
+        [
+          19,
+          38
+        ]
+      ],
+      "model_id": null,
+      "reason": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 2,
+      "xy": [
+        939.6562901959982,
+        348.25152971087385
+      ],
+      "parents": [
+        [
+          1,
+          18
+        ],
+        [
+          4,
+          18
+        ],
+        [
+          12,
+          18
+        ]
+      ],
+      "model_id": null,
+      "reason": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 3,
+      "xy": [
+        1197.5809411068958,
+        515.774127755378
+      ],
+      "parents": [
+        [
+          2,
+          56
+        ],
+        [
+          9,
+          56
+        ]
+      ],
+      "model_id": null,
+      "reason": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 4,
+      "xy": [
+        1160.6305566219435,
+        345.0512703901662
+      ],
+      "parents": [
+        [
+          5,
+          18
+        ],
+        [
+          18,
+          31
+        ]
+      ],
+      "model_id": null,
+      "reason": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 5,
+      "xy": [
+        982.1027571519005,
+        706.3619575320856
+      ],
+      "parents": [
+        [
+          13,
+          45
+        ]
+      ],
+      "model_id": null,
+      "reason": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 6,
+      "xy": [
+        969.777356964319,
+        706.2371860304254
+      ],
+      "parents": [
+        [
+          14,
+          45
+        ]
+      ],
+      "model_id": null,
+      "reason": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    }
+  ],
+  "segments": [
+    {
+      "local_id": 0,
+      "xy": [
+        [
+          962.4920043945312,
+          501.8581237792969
+        ],
+        [
+          963.3123779296875,
+          531.8356323242188
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 1,
+      "xy": [
+        [
+          940.3777465820312,
+          353.1613464355469
+        ],
+        [
+          962.069091796875,
+          500.7801513671875
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 2,
+      "xy": [
+        [
+          1196.94287109375,
+          488.0946350097656
+        ],
+        [
+          1197.6929931640625,
+          520.6349487304688
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 3,
+      "xy": [
+        [
+          966.2122192382812,
+          523.170654296875
+        ],
+        [
+          964.1376953125,
+          493.05523681640625
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 4,
+      "xy": [
+        [
+          963.5918579101562,
+          491.9892272949219
+        ],
+        [
+          943.1287231445312,
+          351.692138671875
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 5,
+      "xy": [
+        [
+          1160.544677734375,
+          344.70404052734375
+        ],
+        [
+          1195.7745361328125,
+          487.1471862792969
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 6,
+      "xy": [
+        [
+          930.906005859375,
+          525.693359375
+        ],
+        [
+          929.8475952148438,
+          549.3961181640625
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 0.9523809523809523,
+      "legacy_candidate": false,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 7,
+      "xy": [
+        [
+          925.0308227539062,
+          573.1384887695312
+        ],
+        [
+          924.7376098632812,
+          533.1131591796875
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 8,
+      "xy": [
+        [
+          928.5830688476562,
+          556.8798828125
+        ],
+        [
+          928.3843994140625,
+          575.6277465820312
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": false,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 9,
+      "xy": [
+        [
+          1196.3369140625,
+          521.4310913085938
+        ],
+        [
+          1188.5213623046875,
+          552.9130859375
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 10,
+      "xy": [
+        [
+          931.393310546875,
+          610.8341674804688
+        ],
+        [
+          926.9702758789062,
+          574.2125244140625
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 11,
+      "xy": [
+        [
+          943.758056640625,
+          706.1793823242188
+        ],
+        [
+          931.7474365234375,
+          611.5737915039062
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 12,
+      "xy": [
+        [
+          925.5358276367188,
+          534.1777954101562
+        ],
+        [
+          939.6964721679688,
+          348.24468994140625
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 0.9523809523809523,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 13,
+      "xy": [
+        [
+          988.3328247070312,
+          658.15185546875
+        ],
+        [
+          983.16650390625,
+          698.13037109375
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 14,
+      "xy": [
+        [
+          970.0567626953125,
+          703.0747680664062
+        ],
+        [
+          975.7938842773438,
+          638.139892578125
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 15,
+      "xy": [
+        [
+          1008.0289306640625,
+          643.1129150390625
+        ],
+        [
+          1004.5779418945312,
+          670.4930419921875
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 16,
+      "xy": [
+        [
+          1155.8385009765625,
+          674.0985717773438
+        ],
+        [
+          1186.7747802734375,
+          558.0982666015625
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 17,
+      "xy": [
+        [
+          980.9338989257812,
+          723.9624633789062
+        ],
+        [
+          954.97216796875,
+          719.1383056640625
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.09523809523809523,
+      "edge_support": 0.09523809523809523,
+      "legacy_candidate": true,
+      "model_id": null
+    },
+    {
+      "local_id": 18,
+      "xy": [
+        [
+          944.3577270507812,
+          348.1834411621094
+        ],
+        [
+          1158.1715087890625,
+          345.0868835449219
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 19,
+      "xy": [
+        [
+          961.2628173828125,
+          515.5363159179688
+        ],
+        [
+          952.57275390625,
+          453.0279846191406
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 0.8571428571428571,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 20,
+      "xy": [
+        [
+          1702.30908203125,
+          743.6812744140625
+        ],
+        [
+          1793.6988525390625,
+          877.7337646484375
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 21,
+      "xy": [
+        [
+          257.11083984375,
+          891.8463745117188
+        ],
+        [
+          263.92510986328125,
+          948.0279541015625
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 22,
+      "xy": [
+        [
+          239.9149627685547,
+          730.556884765625
+        ],
+        [
+          243.07901000976562,
+          755.6307983398438
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 23,
+      "xy": [
+        [
+          1641.4139404296875,
+          654.6929321289062
+        ],
+        [
+          1662.28466796875,
+          684.9545288085938
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 24,
+      "xy": [
+        [
+          1669.638671875,
+          702.557861328125
+        ],
+        [
+          1631.927734375,
+          648.0885009765625
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 25,
+      "xy": [
+        [
+          1767.2374267578125,
+          846.6254272460938
+        ],
+        [
+          1734.1915283203125,
+          798.6405029296875
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 26,
+      "xy": [
+        [
+          1804.1414794921875,
+          893.2847290039062
+        ],
+        [
+          1825.0789794921875,
+          923.8934326171875
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 27,
+      "xy": [
+        [
+          1841.808349609375,
+          955.6724853515625
+        ],
+        [
+          1828.7379150390625,
+          937.3289794921875
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 28,
+      "xy": [
+        [
+          1002.757568359375,
+          730.4082641601562
+        ],
+        [
+          979.84912109375,
+          722.26171875
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 29,
+      "xy": [
+        [
+          1685.021484375,
+          724.8247680664062
+        ],
+        [
+          1670.2344970703125,
+          704.984375
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 30,
+      "xy": [
+        [
+          1793.86962890625,
+          885.1127319335938
+        ],
+        [
+          1769.3145751953125,
+          849.4165649414062
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 31,
+      "xy": [
+        [
+          1194.83447265625,
+          495.51068115234375
+        ],
+        [
+          1159.40478515625,
+          353.1175842285156
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 0.8571428571428571,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 32,
+      "xy": [
+        [
+          1817.6318359375,
+          920.9555053710938
+        ],
+        [
+          1795.0501708984375,
+          887.26025390625
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 33,
+      "xy": [
+        [
+          1858.974365234375,
+          983.38916015625
+        ],
+        [
+          1842.1820068359375,
+          957.9225463867188
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 34,
+      "xy": [
+        [
+          234.64097595214844,
+          681.8468017578125
+        ],
+        [
+          238.4826202392578,
+          718.0870971679688
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 35,
+      "xy": [
+        [
+          246.40008544921875,
+          788.17626953125
+        ],
+        [
+          257.3280029296875,
+          889.4609985351562
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 36,
+      "xy": [
+        [
+          205.80072021484375,
+          465.6045227050781
+        ],
+        [
+          198.5115203857422,
+          403.0799255371094
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 37,
+      "xy": [
+        [
+          1051.7978515625,
+          523.131591796875
+        ],
+        [
+          973.040771484375,
+          528.0172119140625
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 38,
+      "xy": [
+        [
+          969.2977905273438,
+          512.6805419921875
+        ],
+        [
+          1098.2357177734375,
+          506.80560302734375
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 0.9523809523809523,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 39,
+      "xy": [
+        [
+          960.777587890625,
+          570.6376953125
+        ],
+        [
+          962.3362426757812,
+          551.9133911132812
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": false,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 40,
+      "xy": [
+        [
+          1019.8367309570312,
+          728.5750732421875
+        ],
+        [
+          1005.8363647460938,
+          724.8340454101562
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 41,
+      "xy": [
+        [
+          1199.902587890625,
+          523.1465454101562
+        ],
+        [
+          1200.9754638671875,
+          496.8893127441406
+        ]
+      ],
+      "reason": "weak_canny_support",
+      "roi_fraction": 0.7619047619047619,
+      "edge_support": 0.2857142857142857,
+      "legacy_candidate": true,
+      "model_id": null
+    },
+    {
+      "local_id": 42,
+      "xy": [
+        [
+          243.1509246826172,
+          759.3717651367188
+        ],
+        [
+          246.42271423339844,
+          785.6812744140625
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 43,
+      "xy": [
+        [
+          204.2349853515625,
+          405.6397705078125
+        ],
+        [
+          213.5979766845703,
+          494.4569091796875
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 44,
+      "xy": [
+        [
+          1094.42236328125,
+          521.489501953125
+        ],
+        [
+          1069.3509521484375,
+          522.0515747070312
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 45,
+      "xy": [
+        [
+          960.5944213867188,
+          706.1442260742188
+        ],
+        [
+          984.3799438476562,
+          706.385009765625
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": false,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 46,
+      "xy": [
+        [
+          241.57095336914062,
+          794.5355224609375
+        ],
+        [
+          238.06918334960938,
+          760.6307373046875
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 47,
+      "xy": [
+        [
+          1608.7857666015625,
+          606.4356689453125
+        ],
+        [
+          1629.7060546875,
+          637.9049072265625
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": true,
+      "model_id": null
+    },
+    {
+      "local_id": 48,
+      "xy": [
+        [
+          956.3572998046875,
+          581.945556640625
+        ],
+        [
+          950.9403076171875,
+          638.1553955078125
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 49,
+      "xy": [
+        [
+          1617.8216552734375,
+          625.860595703125
+        ],
+        [
+          1603.5653076171875,
+          607.5038452148438
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 50,
+      "xy": [
+        [
+          1709.287841796875,
+          760.687744140625
+        ],
+        [
+          1697.313232421875,
+          744.0594482421875
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 51,
+      "xy": [
+        [
+          226.30271911621094,
+          650.6909790039062
+        ],
+        [
+          219.94850158691406,
+          595.5588989257812
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 52,
+      "xy": [
+        [
+          955.604736328125,
+          621.8731689453125
+        ],
+        [
+          958.4451904296875,
+          590.6541137695312
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 53,
+      "xy": [
+        [
+          1830.5604248046875,
+          931.9160766601562
+        ],
+        [
+          1845.630126953125,
+          955.6217041015625
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 54,
+      "xy": [
+        [
+          1198.0577392578125,
+          484.3908996582031
+        ],
+        [
+          1191.5738525390625,
+          456.9461364746094
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 0.5238095238095238,
+      "legacy_candidate": false,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 55,
+      "xy": [
+        [
+          258.0787048339844,
+          948.1301879882812
+        ],
+        [
+          254.4192352294922,
+          915.6199951171875
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 56,
+      "xy": [
+        [
+          1193.1939697265625,
+          515.9644165039062
+        ],
+        [
+          1140.5760498046875,
+          518.2467651367188
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 57,
+      "xy": [
+        [
+          237.06564331054688,
+          753.1041870117188
+        ],
+        [
+          226.428466796875,
+          655.6737670898438
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 58,
+      "xy": [
+        [
+          192.8147735595703,
+          308.1554260253906
+        ],
+        [
+          196.85662841796875,
+          349.3768005371094
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 59,
+      "xy": [
+        [
+          218.0988006591797,
+          574.3782348632812
+        ],
+        [
+          211.5023193359375,
+          520.6707763671875
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 60,
+      "xy": [
+        [
+          949.4081420898438,
+          709.5231323242188
+        ],
+        [
+          959.9967651367188,
+          707.1546630859375
+        ]
+      ],
+      "reason": "short_segment",
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 61,
+      "xy": [
+        [
+          1688.9971923828125,
+          723.8038940429688
+        ],
+        [
+          1701.716552734375,
+          743.228759765625
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 62,
+      "xy": [
+        [
+          1187.925048828125,
+          441.92645263671875
+        ],
+        [
+          1177.6512451171875,
+          401.99688720703125
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 0.9523809523809523,
+      "edge_support": 0.47619047619047616,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 63,
+      "xy": [
+        [
+          1809.46630859375,
+          545.9866333007812
+        ],
+        [
+          1838.2730712890625,
+          538.7114868164062
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 64,
+      "xy": [
+        [
+          1138.181640625,
+          517.353759765625
+        ],
+        [
+          1116.787353515625,
+          519.8836669921875
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": false,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 65,
+      "xy": [
+        [
+          960.245361328125,
+          549.3351440429688
+        ],
+        [
+          958.140625,
+          569.3766479492188
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": false,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 66,
+      "xy": [
+        [
+          1629.391357421875,
+          643.112548828125
+        ],
+        [
+          1617.5733642578125,
+          627.5932006835938
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 67,
+      "xy": [
+        [
+          217.70126342773438,
+          529.2820434570312
+        ],
+        [
+          220.80413818359375,
+          556.8548583984375
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 68,
+      "xy": [
+        [
+          1662.815185546875,
+          685.8342895507812
+        ],
+        [
+          1675.4295654296875,
+          704.507080078125
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 69,
+      "xy": [
+        [
+          1879.8470458984375,
+          1005.2711791992188
+        ],
+        [
+          1890.4920654296875,
+          1019.474609375
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 70,
+      "xy": [
+        [
+          985.3616333007812,
+          704.2874755859375
+        ],
+        [
+          999.348388671875,
+          702.8638305664062
+        ]
+      ],
+      "reason": "short_segment",
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 71,
+      "xy": [
+        [
+          1248.2840576171875,
+          735.3299560546875
+        ],
+        [
+          1237.8795166015625,
+          734.2586669921875
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 72,
+      "xy": [
+        [
+          958.97119140625,
+          443.1869812011719
+        ],
+        [
+          964.3350219726562,
+          478.1311340332031
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 0.9047619047619048,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 73,
+      "xy": [
+        [
+          215.06161499023438,
+          508.0372009277344
+        ],
+        [
+          217.63812255859375,
+          528.187255859375
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 74,
+      "xy": [
+        [
+          1111.877197265625,
+          521.3622436523438
+        ],
+        [
+          1094.377197265625,
+          521.3493041992188
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": false,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 75,
+      "xy": [
+        [
+          950.4838256835938,
+          678.1173706054688
+        ],
+        [
+          951.4994506835938,
+          659.3546752929688
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": false,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 76,
+      "xy": [
+        [
+          1149.0828857421875,
+          501.380859375
+        ],
+        [
+          1161.6798095703125,
+          503.2152404785156
+        ]
+      ],
+      "reason": "short_segment",
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 77,
+      "xy": [
+        [
+          1708.05615234375,
+          572.8706665039062
+        ],
+        [
+          1739.378662109375,
+          564.3886108398438
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 78,
+      "xy": [
+        [
+          1068.1776123046875,
+          522.5322265625
+        ],
+        [
+          1050.656494140625,
+          523.0160522460938
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": false,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 79,
+      "xy": [
+        [
+          1759.3238525390625,
+          565.4114379882812
+        ],
+        [
+          1729.53564453125,
+          572.5458984375
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 80,
+      "xy": [
+        [
+          996.9032592773438,
+          702.241455078125
+        ],
+        [
+          1023.1234130859375,
+          701.7828979492188
+        ]
+      ],
+      "reason": null,
+      "roi_fraction": 1.0,
+      "edge_support": 1.0,
+      "legacy_candidate": true,
+      "model_id": null,
+      "assignment_reason": "awaiting_calibrated_pose"
+    },
+    {
+      "local_id": 81,
+      "xy": [
+        [
+          925.11767578125,
+          586.932861328125
+        ],
+        [
+          928.24658203125,
+          614.3611450195312
+        ]
+      ],
+      "reason": "weak_canny_support",
+      "roi_fraction": 0.9047619047619048,
+      "edge_support": 0.09523809523809523,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 82,
+      "xy": [
+        [
+          1868.0653076171875,
+          988.1674194335938
+        ],
+        [
+          1879.515380859375,
+          1004.2752075195312
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 83,
+      "xy": [
+        [
+          1206.7139892578125,
+          561.168701171875
+        ],
+        [
+          1221.8167724609375,
+          562.52392578125
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 84,
+      "xy": [
+        [
+          245.03558349609375,
+          828.1837768554688
+        ],
+        [
+          241.79046630859375,
+          795.6334228515625
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 85,
+      "xy": [
+        [
+          210.51010131835938,
+          518.1310424804688
+        ],
+        [
+          209.3275909423828,
+          495.5619812011719
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 86,
+      "xy": [
+        [
+          1085.8028564453125,
+          742.6408081054688
+        ],
+        [
+          1070.4515380859375,
+          741.0662841796875
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 87,
+      "xy": [
+        [
+          226.94497680664062,
+          603.0631713867188
+        ],
+        [
+          227.8882293701172,
+          623.1946411132812
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 88,
+      "xy": [
+        [
+          1843.32275390625,
+          537.6044921875
+        ],
+        [
+          1863.2158203125,
+          532.2100830078125
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 89,
+      "xy": [
+        [
+          231.12603759765625,
+          645.5933227539062
+        ],
+        [
+          232.63067626953125,
+          669.40625
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 90,
+      "xy": [
+        [
+          1870.6279296875,
+          535.6357421875
+        ],
+        [
+          1850.409912109375,
+          541.0755615234375
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 91,
+      "xy": [
+        [
+          1066.9161376953125,
+          731.5122680664062
+        ],
+        [
+          1056.8218994140625,
+          731.9808959960938
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 92,
+      "xy": [
+        [
+          1125.6368408203125,
+          731.4649658203125
+        ],
+        [
+          1113.1112060546875,
+          731.1028442382812
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 93,
+      "xy": [
+        [
+          1200.450439453125,
+          739.6846313476562
+        ],
+        [
+          1185.5015869140625,
+          742.4601440429688
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 94,
+      "xy": [
+        [
+          1185.62451171875,
+          745.6205444335938
+        ],
+        [
+          1164.370849609375,
+          748.0897216796875
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 95,
+      "xy": [
+        [
+          1056.7803955078125,
+          751.2454223632812
+        ],
+        [
+          1046.6351318359375,
+          749.6990356445312
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    },
+    {
+      "local_id": 96,
+      "xy": [
+        [
+          1558.1925048828125,
+          618.66943359375
+        ],
+        [
+          1544.345458984375,
+          620.3864135742188
+        ]
+      ],
+      "reason": "outside_roi",
+      "roi_fraction": 0.0,
+      "edge_support": 0.0,
+      "legacy_candidate": false,
+      "model_id": null
+    }
+  ],
+  "video_path": "data/sample_videos/WIN_20261124_20_05_34_Pro.mp4"
+}

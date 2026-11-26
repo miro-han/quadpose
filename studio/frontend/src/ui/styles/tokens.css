@@ -1,0 +1,361 @@
+/*
+ * MIRO-Design Token System
+ * Scoped to .miro-root (and opt-in :root[data-miro-global="true"]) to prevent
+ * global CSS custom property pollution in host applications.
+ */
+.miro-root,
+.miro-root[data-theme="light"],
+:root[data-miro-global="true"],
+:root[data-miro-global="true"][data-theme="light"] {
+  color-scheme: light;
+
+  /* Canonical --miro-* Color & Surface Tokens */
+  --miro-bg: #f5f5f2;
+  --miro-panel: #fafaf8;
+  --miro-soft: #f0f1f3;
+  --miro-text: #272930;
+  --miro-muted: #686d78;
+  --miro-line: #e2e4e9;
+  --miro-selector-edge: var(--miro-line);
+  --miro-accent: #505d70;
+  --miro-accent-soft: #e9ebee;
+  --miro-paper: #e6e7eb;
+  --miro-success: #568065;
+  --miro-warning: #92763f;
+  --miro-danger: #a64e44;
+  --miro-danger-surface: #f3e7e3;
+
+  /* Canonical --miro-* Spacing Scale */
+  --miro-space-1: 0.25rem;
+  --miro-space-2: 0.5rem;
+  --miro-space-3: 0.75rem;
+  --miro-space-4: 1rem;
+  --miro-space-5: 1.25rem;
+  --miro-space-6: 1.5rem;
+  --miro-space-8: 2rem;
+  --miro-space-10: 2.5rem;
+  --miro-space-12: 3rem;
+
+  /* Canonical --miro-* Typography Scale */
+  --miro-ui-family: "Pretendard Variable", "Pretendard", "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  --miro-editor-family: "Cascadia Code", Consolas, monospace;
+  --miro-editor-size: 0.9375rem;
+  --miro-type-meta: 0.6875rem;
+  --miro-type-small: 0.75rem;
+  --miro-type-ui: 0.8125rem;
+  --miro-type-body: 0.9375rem;
+  --miro-type-heading: 1.25rem;
+  --miro-type-title: 2.5rem;
+  --miro-leading-ui: 1.5;
+  --miro-leading-editor: 1.85;
+  --miro-tracking-index: 0.075em;
+
+  /* Canonical --miro-* Radius & Control Geometry */
+  --miro-radius-control: 3px;
+  --miro-radius-floating-row: 8px;
+  --miro-radius-popover: 12px;
+  --miro-radius-panel: 18px;
+  --miro-radius-dialog: 24px;
+  --miro-radius-badge: 999px;
+  --miro-control-height: 2rem;
+  --miro-compact-control-height: 2.375rem;
+  --miro-compact-control-radius: 999px;
+  --miro-compact-control-inset: 2px;
+  --miro-compact-label-size: 0.6875rem;
+  --miro-compact-label-weight: 600;
+  --miro-compact-icon-size: 14px;
+  --miro-compact-bead-height: calc(var(--miro-compact-control-height) - 6px);
+  --miro-workspace-control-inset: 4px;
+  --miro-workspace-bottom-clearance: var(--miro-space-4);
+  --miro-shell-clearance: calc(var(--miro-compact-control-height) + (var(--miro-workspace-control-inset) * 2));
+  --miro-sidebar-tint: color-mix(in srgb, var(--miro-accent) 10%, transparent);
+  --miro-sidebar-hover: color-mix(in srgb, var(--miro-text) 6%, transparent);
+  --miro-toggle-width: 2.35rem;
+  --miro-toggle-height: 1.3rem;
+  --miro-toggle-thumb-size: 0.91rem;
+  --miro-toggle-inset: 0.13rem;
+  --miro-measure-reading: 76ch;
+  --miro-measure-panel: 23.75rem;
+  --miro-measure-utility: 38.75rem;
+
+  /* Canonical --miro-* Motion & Timing */
+  --miro-motion-instant: 80ms;
+  --miro-motion-fast: 140ms;
+  --miro-motion-normal: 220ms;
+  --miro-motion-selection: var(--miro-motion-normal);
+  --miro-motion-slow: 280ms;
+  --miro-ease-selection: ease;
+  --miro-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --miro-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --miro-popover-enter: 160ms;
+  --miro-popover-exit: 140ms;
+  --miro-navigation-push: 200ms;
+  --miro-workspace-transition: 220ms;
+  --miro-semantic-flash: 600ms;
+  --miro-zoom-hold: 750ms;
+  --miro-zoom-exit: 180ms;
+
+  /* Canonical --miro-* Elevation & Material Presets */
+  --miro-shadow-subtle: 0 2px 6px rgb(20 22 28 / 0.04);
+  --miro-shadow-popover: 0 8px 28px rgb(0 0 0 / 0.125);
+  --miro-shadow-panel: 0 14px 44px rgb(0 0 0 / 0.157);
+  --miro-shadow-dialog: 0 20px 64px rgb(0 0 0 / 0.188);
+  --miro-material-badge-shadow: 0 3px 12px rgb(0 0 0 / 0.078);
+  --miro-material-popover-shadow: 0 8px 28px rgb(0 0 0 / 0.125);
+  --miro-material-panel-shadow: 0 14px 44px rgb(0 0 0 / 0.157);
+  --miro-material-dialog-shadow: 0 20px 64px rgb(0 0 0 / 0.188);
+  --miro-glass-bg: color-mix(in srgb, var(--miro-panel) 84%, transparent);
+  --miro-glass-edge: color-mix(in srgb, var(--miro-text) 13%, transparent);
+  --miro-glass-highlight: rgb(255 255 255 / 0.45);
+  --miro-glass-shadow: 0 3px 14px rgb(0 0 0 / 0.08);
+  --miro-glass-blur: 18px;
+  --miro-liquid-veil: 60%;
+  --miro-liquid-blur: 4px;
+  --miro-liquid-rim-light: rgb(255 255 255 / 0.55);
+  --miro-liquid-rim-dark: rgb(20 22 28 / 0.08);
+  --miro-material-veil: 60%;
+  --miro-material-blur: 4px;
+  --miro-material-rim-top: rgb(255 255 255 / 0.48);
+  --miro-material-rim-bottom: rgb(20 22 28 / 0.08);
+  --miro-material-specular: rgb(255 255 255 / 0.34);
+  --miro-material-liquid-edge: color-mix(in srgb, var(--miro-text) 11%, transparent);
+  --miro-compact-selection-fill: color-mix(in srgb, var(--miro-text) 8%, transparent);
+  --miro-compact-selection-edge: var(--miro-selector-edge);
+
+  /* Scoped Compatibility Aliases (available only inside .miro-root) */
+  --bg: var(--miro-bg);
+  --panel: var(--miro-panel);
+  --soft: var(--miro-soft);
+  --text: var(--miro-text);
+  --muted: var(--miro-muted);
+  --line: var(--miro-line);
+  --selector-edge: var(--miro-selector-edge);
+  --accent: var(--miro-accent);
+  --accent-soft: var(--miro-accent-soft);
+  --paper: var(--miro-paper);
+  --success: var(--miro-success);
+  --warning: var(--miro-warning);
+  --danger: var(--miro-danger);
+  --danger-surface: var(--miro-danger-surface);
+  --space-1: var(--miro-space-1);
+  --space-2: var(--miro-space-2);
+  --space-3: var(--miro-space-3);
+  --space-4: var(--miro-space-4);
+  --space-5: var(--miro-space-5);
+  --space-6: var(--miro-space-6);
+  --space-8: var(--miro-space-8);
+  --space-10: var(--miro-space-10);
+  --space-12: var(--miro-space-12);
+  --ui-family: var(--miro-ui-family);
+  --editor-family: var(--miro-editor-family);
+  --editor-size: var(--miro-editor-size);
+  --type-meta: var(--miro-type-meta);
+  --type-small: var(--miro-type-small);
+  --type-ui: var(--miro-type-ui);
+  --type-body: var(--miro-type-body);
+  --type-heading: var(--miro-type-heading);
+  --type-title: var(--miro-type-title);
+  --leading-ui: var(--miro-leading-ui);
+  --leading-editor: var(--miro-leading-editor);
+  --tracking-index: var(--miro-tracking-index);
+  --radius-control: var(--miro-radius-control);
+  --radius-floating-row: var(--miro-radius-floating-row);
+  --radius-popover: var(--miro-radius-popover);
+  --radius-panel: var(--miro-radius-panel);
+  --radius-dialog: var(--miro-radius-dialog);
+  --radius-badge: var(--miro-radius-badge);
+  --control-height: var(--miro-control-height);
+  --compact-control-height: var(--miro-compact-control-height);
+  --compact-control-radius: var(--miro-compact-control-radius);
+  --compact-control-inset: var(--miro-compact-control-inset);
+  --compact-label-size: var(--miro-compact-label-size);
+  --compact-label-weight: var(--miro-compact-label-weight);
+  --compact-icon-size: var(--miro-compact-icon-size);
+  --compact-bead-height: var(--miro-compact-bead-height);
+  --workspace-control-inset: var(--miro-workspace-control-inset);
+  --workspace-bottom-clearance: var(--miro-workspace-bottom-clearance);
+  --shell-clearance: var(--miro-shell-clearance);
+  --sidebar-tint: var(--miro-sidebar-tint);
+  --sidebar-hover: var(--miro-sidebar-hover);
+  --toggle-width: var(--miro-toggle-width);
+  --toggle-height: var(--miro-toggle-height);
+  --toggle-thumb-size: var(--miro-toggle-thumb-size);
+  --toggle-inset: var(--miro-toggle-inset);
+  --measure-reading: var(--miro-measure-reading);
+  --measure-panel: var(--miro-measure-panel);
+  --measure-utility: var(--miro-measure-utility);
+  --motion-instant: var(--miro-motion-instant);
+  --motion-fast: var(--miro-motion-fast);
+  --motion-normal: var(--miro-motion-normal);
+  --motion-selection: var(--miro-motion-selection);
+  --motion-slow: var(--miro-motion-slow);
+  --ease-selection: var(--miro-ease-selection);
+  --ease-out: var(--miro-ease-out);
+  --ease-standard: var(--miro-ease-standard);
+  --popover-enter: var(--miro-popover-enter);
+  --popover-exit: var(--miro-popover-exit);
+  --navigation-push: var(--miro-navigation-push);
+  --workspace-transition: var(--miro-workspace-transition);
+  --semantic-flash: var(--miro-semantic-flash);
+  --zoom-hold: var(--miro-zoom-hold);
+  --zoom-exit: var(--miro-zoom-exit);
+  --shadow-subtle: var(--miro-shadow-subtle);
+  --shadow-popover: var(--miro-shadow-popover);
+  --shadow-panel: var(--miro-shadow-panel);
+  --shadow-dialog: var(--miro-shadow-dialog);
+  --material-badge-shadow: var(--miro-material-badge-shadow);
+  --material-popover-shadow: var(--miro-material-popover-shadow);
+  --material-panel-shadow: var(--miro-material-panel-shadow);
+  --material-dialog-shadow: var(--miro-material-dialog-shadow);
+  --glass-bg: var(--miro-glass-bg);
+  --glass-edge: var(--miro-glass-edge);
+  --glass-highlight: var(--miro-glass-highlight);
+  --glass-shadow: var(--miro-glass-shadow);
+  --glass-blur: var(--miro-glass-blur);
+  --liquid-veil: var(--miro-liquid-veil);
+  --liquid-blur: var(--miro-liquid-blur);
+  --liquid-rim-light: var(--miro-liquid-rim-light);
+  --liquid-rim-dark: var(--miro-liquid-rim-dark);
+  --material-rim-top: var(--miro-material-rim-top);
+  --material-rim-bottom: var(--miro-material-rim-bottom);
+  --material-specular: var(--miro-material-specular);
+  --material-liquid-edge: var(--miro-material-liquid-edge);
+  --compact-selection-fill: var(--miro-compact-selection-fill);
+  --compact-selection-edge: var(--miro-compact-selection-edge);
+}
+
+.miro-root[data-theme="dark"],
+:root[data-miro-global="true"][data-theme="dark"] {
+  color-scheme: dark;
+  --miro-bg: #0e0f11;
+  --miro-panel: #151619;
+  --miro-soft: #202126;
+  --miro-text: #eeeef1;
+  --miro-muted: #a2a4ad;
+  --miro-line: #2c2e35;
+  --miro-selector-edge: color-mix(in srgb, var(--miro-text) 14%, transparent);
+  --miro-accent: #c0cad8;
+  --miro-accent-soft: #25282d;
+  --miro-paper: #090a0c;
+  --miro-success: #9cbda7;
+  --miro-warning: #c7b17d;
+  --miro-danger: #e5aaa0;
+  --miro-danger-surface: #332624;
+  --miro-shadow-subtle: 0 2px 6px rgb(0 0 0 / 0.24);
+  --miro-shadow-popover: 0 8px 28px rgb(0 0 0 / 0.36);
+  --miro-shadow-panel: 0 14px 44px rgb(0 0 0 / 0.42);
+  --miro-shadow-dialog: 0 20px 64px rgb(0 0 0 / 0.48);
+  --miro-material-badge-shadow: 0 3px 12px rgb(0 0 0 / 0.24);
+  --miro-material-popover-shadow: 0 8px 28px rgb(0 0 0 / 0.36);
+  --miro-material-panel-shadow: 0 14px 44px rgb(0 0 0 / 0.42);
+  --miro-material-dialog-shadow: 0 20px 64px rgb(0 0 0 / 0.48);
+  --miro-glass-bg: color-mix(in srgb, var(--miro-panel) 84%, transparent);
+  --miro-glass-edge: color-mix(in srgb, var(--miro-text) 13%, transparent);
+  --miro-glass-highlight: rgb(255 255 255 / 0.07);
+  --miro-glass-shadow: 0 3px 14px rgb(0 0 0 / 0.08);
+  --miro-liquid-rim-light: rgb(255 255 255 / 0.14);
+  --miro-liquid-rim-dark: rgb(0 0 0 / 0.36);
+  --miro-material-rim-top: rgb(255 255 255 / 0.14);
+  --miro-material-rim-bottom: rgb(0 0 0 / 0.36);
+  --miro-material-specular: rgb(255 255 255 / 0.11);
+  --miro-material-liquid-edge: color-mix(in srgb, var(--miro-text) 11%, transparent);
+  --miro-compact-selection-fill: color-mix(in srgb, var(--miro-text) 8%, transparent);
+  --miro-compact-selection-edge: var(--miro-selector-edge);
+  --miro-sidebar-tint: color-mix(in srgb, var(--miro-accent) 12%, transparent);
+  --miro-sidebar-hover: color-mix(in srgb, var(--miro-text) 8%, transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+  .miro-root[data-theme="system"],
+  :root[data-miro-global="true"][data-theme="system"] {
+    color-scheme: dark;
+    --miro-bg: #0e0f11;
+    --miro-panel: #151619;
+    --miro-soft: #202126;
+    --miro-text: #eeeef1;
+    --miro-muted: #a2a4ad;
+    --miro-line: #2c2e35;
+    --miro-selector-edge: color-mix(in srgb, var(--miro-text) 14%, transparent);
+    --miro-accent: #c0cad8;
+    --miro-accent-soft: #25282d;
+    --miro-paper: #090a0c;
+    --miro-success: #9cbda7;
+    --miro-warning: #c7b17d;
+    --miro-danger: #e5aaa0;
+    --miro-danger-surface: #332624;
+    --miro-shadow-subtle: 0 2px 6px rgb(0 0 0 / 0.24);
+    --miro-shadow-popover: 0 8px 28px rgb(0 0 0 / 0.36);
+    --miro-shadow-panel: 0 14px 44px rgb(0 0 0 / 0.42);
+    --miro-shadow-dialog: 0 20px 64px rgb(0 0 0 / 0.48);
+    --miro-material-badge-shadow: 0 3px 12px rgb(0 0 0 / 0.24);
+    --miro-material-popover-shadow: 0 8px 28px rgb(0 0 0 / 0.36);
+    --miro-material-panel-shadow: 0 14px 44px rgb(0 0 0 / 0.42);
+    --miro-material-dialog-shadow: 0 20px 64px rgb(0 0 0 / 0.48);
+    --miro-glass-bg: color-mix(in srgb, var(--miro-panel) 84%, transparent);
+    --miro-glass-edge: color-mix(in srgb, var(--miro-text) 13%, transparent);
+    --miro-glass-highlight: rgb(255 255 255 / 0.07);
+    --miro-glass-shadow: 0 3px 14px rgb(0 0 0 / 0.08);
+    --miro-liquid-rim-light: rgb(255 255 255 / 0.14);
+    --miro-liquid-rim-dark: rgb(0 0 0 / 0.36);
+    --miro-material-rim-top: rgb(255 255 255 / 0.14);
+    --miro-material-rim-bottom: rgb(0 0 0 / 0.36);
+    --miro-material-specular: rgb(255 255 255 / 0.11);
+    --miro-material-liquid-edge: color-mix(in srgb, var(--miro-text) 11%, transparent);
+    --miro-compact-selection-fill: color-mix(in srgb, var(--miro-text) 8%, transparent);
+    --miro-compact-selection-edge: var(--miro-selector-edge);
+    --miro-sidebar-tint: color-mix(in srgb, var(--miro-accent) 12%, transparent);
+    --miro-sidebar-hover: color-mix(in srgb, var(--miro-text) 8%, transparent);
+  }
+}
+
+/* Comfortable content-density preset: scales content/utility typography while keeping compact chrome invariant */
+.miro-root[data-density="comfortable"],
+:root[data-miro-global="true"][data-density="comfortable"] {
+  --miro-type-meta: 0.75rem;
+  --miro-type-small: 0.8125rem;
+  --miro-type-ui: 0.875rem;
+  --miro-type-body: 0.9375rem;
+  --miro-control-height: 2.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .miro-root,
+  :root[data-miro-global="true"] {
+    --miro-motion-instant: 0ms;
+    --miro-motion-fast: 0ms;
+    --miro-motion-normal: 0ms;
+    --miro-motion-selection: 0ms;
+    --miro-motion-slow: 0ms;
+    --miro-popover-enter: 0ms;
+    --miro-popover-exit: 0ms;
+    --miro-navigation-push: 0ms;
+    --miro-workspace-transition: 0ms;
+    --miro-semantic-flash: 0ms;
+    --miro-zoom-exit: 0ms;
+  }
+}
+
+.miro-root[data-reduce-motion="true"],
+:root[data-miro-global="true"][data-reduce-motion="true"] {
+  --miro-motion-instant: 0ms;
+  --miro-motion-fast: 0ms;
+  --miro-motion-normal: 0ms;
+  --miro-motion-selection: 0ms;
+  --miro-motion-slow: 0ms;
+  --miro-popover-enter: 0ms;
+  --miro-popover-exit: 0ms;
+  --miro-navigation-push: 0ms;
+  --miro-workspace-transition: 0ms;
+  --miro-semantic-flash: 0ms;
+  --miro-zoom-exit: 0ms;
+}
+
+.miro-root {
+  font-family: var(--miro-ui-family);
+  font-size: var(--miro-type-ui);
+  line-height: var(--miro-leading-ui);
+  color: var(--miro-text);
+  background: var(--miro-bg);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}

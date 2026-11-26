@@ -1,0 +1,471 @@
+{
+  "pid": 36852,
+  "device": {
+    "runtime": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\amdocl.inf_amd64_7b4e64250e49ad58\\amdocl64.dll",
+    "name": "gfx1035",
+    "vendor": "Advanced Micro Devices, Inc.",
+    "driver": "3570.0 (PAL,LC)"
+  },
+  "threads": 1,
+  "memory_cap_gib": 3,
+  "steps": 40,
+  "warmup_steps": 4,
+  "learning_rate": 0.18000000715255737,
+  "class_weights": [
+    0.5601750612258911,
+    4.654545307159424
+  ],
+  "dataset": {
+    "train": {
+      "frames": 384,
+      "trials": 24,
+      "healthy": 1371,
+      "faulty": 165
+    },
+    "validation": {
+      "frames": 192,
+      "trials": 16,
+      "healthy": 690,
+      "faulty": 78
+    },
+    "test": {
+      "frames": 288,
+      "trials": 24,
+      "healthy": 1035,
+      "faulty": 117
+    }
+  },
+  "process_local_nonlocal_dxgi_bytes": {
+    "before": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        0,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "after_training_before_release": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        115032064,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "after_release": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        87265280,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    }
+  },
+  "tracked_module_loaded": {
+    "OpenCL.dll": false,
+    "nvcuda.dll": false,
+    "nvopencl64.dll": false,
+    "DirectML.dll": false,
+    "torch_directml.dll": false
+  },
+  "results": {
+    "deep_sets": {
+      "parameters": 193,
+      "compile_ms": 2111.2368,
+      "numeric_verification": {
+        "max_cpu_amd_gradient_delta": 7.82310962677002e-08,
+        "max_cpu_amd_probability_delta": 5.960464477539063e-08,
+        "absolute_loss_delta": 0.0,
+        "finite_difference_coordinates": 12,
+        "max_cpu_finite_difference_gradient_delta": 2.247840166091919e-05,
+        "max_first_sgd_update_delta": 2.9802322387695312e-08,
+        "cpu_initial_gradient_l2": 0.19360092282295227,
+        "amd_initial_gradient_l2": 0.19360092282295227
+      },
+      "amd_parameter_block_l2_change": {
+        "camera_embedding": 0.5492833256721497,
+        "readout": 0.8747377395629883
+      },
+      "max_final_cpu_amd_parameter_delta": 1.7881393432617188e-07,
+      "timing": {
+        "cpu": {
+          "p50_ms": 0.94765,
+          "p95_ms": 1.5540450000000001,
+          "total_ms": 42.5031,
+          "step_ms": [
+            0.8642,
+            0.9991,
+            0.9088,
+            0.8702,
+            1.3085,
+            1.2099,
+            0.9568,
+            0.9264,
+            0.9158,
+            1.0703,
+            0.9024,
+            0.8577,
+            0.8789,
+            1.3512,
+            0.9037,
+            0.8439,
+            0.8318,
+            1.5215,
+            1.4122,
+            1.5535,
+            1.0517,
+            1.0634,
+            1.6686,
+            0.9783,
+            0.8838,
+            1.0882,
+            1.5644,
+            1.0793,
+            1.1386,
+            0.884,
+            0.9319,
+            1.0468,
+            0.8762,
+            0.896,
+            0.8774,
+            1.4146,
+            0.9385,
+            0.9094,
+            1.2033,
+            0.9219
+          ]
+        },
+        "amd": {
+          "p50_ms": 0.5971500000000001,
+          "p95_ms": 1.58551,
+          "total_ms": 30.4709,
+          "step_ms": [
+            0.5116,
+            0.5364,
+            0.5071,
+            0.5493,
+            0.5492,
+            0.6264,
+            0.5575,
+            0.6291,
+            0.5789,
+            0.5597,
+            0.5083,
+            0.5524,
+            0.7029,
+            0.5975,
+            0.5773,
+            0.5923,
+            0.5877,
+            1.5329,
+            0.6557,
+            1.5857,
+            0.5517,
+            1.2248,
+            1.5855,
+            0.5388,
+            0.5865,
+            0.6336,
+            1.5554,
+            0.8996,
+            0.5814,
+            0.537,
+            0.5968,
+            0.6054,
+            0.6438,
+            0.6549,
+            0.6002,
+            1.6116,
+            0.6696,
+            0.5428,
+            1.5452,
+            0.8084
+          ]
+        }
+      },
+      "metrics": {
+        "train": {
+          "initial": {
+            "weighted_loss": 0.7092552185058594,
+            "accuracy": 0.3684895833333333,
+            "balanced_accuracy": 0.4463231881174988,
+            "healthy_recall": 0.34719183078045224,
+            "faulty_recall": 0.5454545454545454
+          },
+          "cpu": {
+            "weighted_loss": 0.543370246887207,
+            "accuracy": 0.7890625,
+            "balanced_accuracy": 0.7672170280485379,
+            "healthy_recall": 0.7950401167031363,
+            "faulty_recall": 0.7393939393939394
+          },
+          "amd": {
+            "weighted_loss": 0.543370246887207,
+            "accuracy": 0.7890625,
+            "balanced_accuracy": 0.7672170280485379,
+            "healthy_recall": 0.7950401167031363,
+            "faulty_recall": 0.7393939393939394
+          },
+          "max_probability_delta": 1.1920928955078125e-07
+        },
+        "validation": {
+          "initial": {
+            "weighted_loss": 0.6927154660224915,
+            "accuracy": 0.2799479166666667,
+            "balanced_accuracy": 0.44576365663322187,
+            "healthy_recall": 0.23768115942028986,
+            "faulty_recall": 0.6538461538461539
+          },
+          "cpu": {
+            "weighted_loss": 0.5011981725692749,
+            "accuracy": 0.9244791666666666,
+            "balanced_accuracy": 0.8499442586399109,
+            "healthy_recall": 0.9434782608695652,
+            "faulty_recall": 0.7564102564102564
+          },
+          "amd": {
+            "weighted_loss": 0.5011981129646301,
+            "accuracy": 0.9244791666666666,
+            "balanced_accuracy": 0.8499442586399109,
+            "healthy_recall": 0.9434782608695652,
+            "faulty_recall": 0.7564102564102564
+          },
+          "max_probability_delta": 1.1920928955078125e-07
+        },
+        "test": {
+          "initial": {
+            "weighted_loss": 0.6863559484481812,
+            "accuracy": 0.2986111111111111,
+            "balanced_accuracy": 0.47699739873652913,
+            "healthy_recall": 0.2531400966183575,
+            "faulty_recall": 0.7008547008547008
+          },
+          "cpu": {
+            "weighted_loss": 0.5168470740318298,
+            "accuracy": 0.8463541666666666,
+            "balanced_accuracy": 0.7818283166109252,
+            "healthy_recall": 0.8628019323671497,
+            "faulty_recall": 0.7008547008547008
+          },
+          "amd": {
+            "weighted_loss": 0.5168470144271851,
+            "accuracy": 0.8463541666666666,
+            "balanced_accuracy": 0.7818283166109252,
+            "healthy_recall": 0.8628019323671497,
+            "faulty_recall": 0.7008547008547008
+          },
+          "max_probability_delta": 1.1920928955078125e-07
+        }
+      }
+    },
+    "cross_attention": {
+      "parameters": 322,
+      "compile_ms": 3288.1744,
+      "numeric_verification": {
+        "max_cpu_amd_gradient_delta": 6.332993507385254e-08,
+        "max_cpu_amd_probability_delta": 5.960464477539063e-08,
+        "absolute_loss_delta": 0.0,
+        "finite_difference_coordinates": 13,
+        "max_cpu_finite_difference_gradient_delta": 3.0550407245755196e-05,
+        "max_first_sgd_update_delta": 1.4901161193847656e-08,
+        "cpu_initial_gradient_l2": 0.21756775677204132,
+        "amd_initial_gradient_l2": 0.21756772696971893
+      },
+      "amd_parameter_block_l2_change": {
+        "camera_embedding": 0.6152127385139465,
+        "readout": 0.8590769171714783,
+        "hypothesis_embedding": 0.10540403425693512,
+        "relation_coefficient": 4.9427151679992676e-05
+      },
+      "max_final_cpu_amd_parameter_delta": 1.7881393432617188e-07,
+      "timing": {
+        "cpu": {
+          "p50_ms": 2.3480499999999997,
+          "p95_ms": 3.0508249999999997,
+          "total_ms": 94.6179,
+          "step_ms": [
+            2.6766,
+            2.7133,
+            2.4008,
+            1.8522,
+            2.0342,
+            2.3015,
+            2.4866,
+            2.1434,
+            1.8944,
+            2.1555,
+            2.6905,
+            2.3849,
+            1.8666,
+            1.9016,
+            2.6697,
+            2.183,
+            1.9357,
+            2.5853,
+            2.5608,
+            2.561,
+            2.2906,
+            1.8994,
+            2.5681,
+            2.5904,
+            2.7315,
+            2.9737,
+            1.9108,
+            1.8885,
+            2.3112,
+            3.0455,
+            2.8234,
+            2.3045,
+            2.1442,
+            1.9495,
+            2.3897,
+            2.5641,
+            1.9522,
+            1.9358,
+            3.152,
+            3.1952
+          ]
+        },
+        "amd": {
+          "p50_ms": 2.46965,
+          "p95_ms": 2.7309799999999997,
+          "total_ms": 99.2921,
+          "step_ms": [
+            2.6056,
+            2.4135,
+            2.4518,
+            2.4259,
+            2.7246,
+            2.6811,
+            2.3406,
+            2.4782,
+            2.2555,
+            2.3635,
+            2.4037,
+            2.3465,
+            2.4767,
+            2.1168,
+            2.2592,
+            2.4913,
+            2.4284,
+            2.6637,
+            2.3204,
+            2.2073,
+            2.4626,
+            2.4824,
+            2.4845,
+            2.3889,
+            2.7292,
+            2.3707,
+            2.4966,
+            2.4195,
+            2.6213,
+            2.5054,
+            2.7298,
+            2.4967,
+            2.4888,
+            2.7534,
+            2.6382,
+            2.3938,
+            2.4111,
+            2.4136,
+            2.8961,
+            2.6552
+          ]
+        }
+      },
+      "metrics": {
+        "train": {
+          "initial": {
+            "weighted_loss": 0.7056191563606262,
+            "accuracy": 0.53125,
+            "balanced_accuracy": 0.4815197931171673,
+            "healthy_recall": 0.5448577680525164,
+            "faulty_recall": 0.41818181818181815
+          },
+          "cpu": {
+            "weighted_loss": 0.5273433327674866,
+            "accuracy": 0.7936197916666666,
+            "balanced_accuracy": 0.7777667263444068,
+            "healthy_recall": 0.7979576951130561,
+            "faulty_recall": 0.7575757575757576
+          },
+          "amd": {
+            "weighted_loss": 0.5273433327674866,
+            "accuracy": 0.7936197916666666,
+            "balanced_accuracy": 0.7777667263444068,
+            "healthy_recall": 0.7979576951130561,
+            "faulty_recall": 0.7575757575757576
+          },
+          "max_probability_delta": 1.1920928955078125e-07
+        },
+        "validation": {
+          "initial": {
+            "weighted_loss": 0.6858814358711243,
+            "accuracy": 0.5677083333333334,
+            "balanced_accuracy": 0.5035674470457079,
+            "healthy_recall": 0.5840579710144927,
+            "faulty_recall": 0.4230769230769231
+          },
+          "cpu": {
+            "weighted_loss": 0.4826056659221649,
+            "accuracy": 0.9322916666666666,
+            "balanced_accuracy": 0.8258639910813823,
+            "healthy_recall": 0.9594202898550724,
+            "faulty_recall": 0.6923076923076923
+          },
+          "amd": {
+            "weighted_loss": 0.4826056957244873,
+            "accuracy": 0.9322916666666666,
+            "balanced_accuracy": 0.8258639910813823,
+            "healthy_recall": 0.9594202898550724,
+            "faulty_recall": 0.6923076923076923
+          },
+          "max_probability_delta": 1.1920928955078125e-07
+        },
+        "test": {
+          "initial": {
+            "weighted_loss": 0.6817346215248108,
+            "accuracy": 0.5746527777777778,
+            "balanced_accuracy": 0.5017465626161278,
+            "healthy_recall": 0.5932367149758454,
+            "faulty_recall": 0.41025641025641024
+          },
+          "cpu": {
+            "weighted_loss": 0.5001323223114014,
+            "accuracy": 0.8463541666666666,
+            "balanced_accuracy": 0.7704570791527314,
+            "healthy_recall": 0.8657004830917875,
+            "faulty_recall": 0.6752136752136753
+          },
+          "amd": {
+            "weighted_loss": 0.5001323223114014,
+            "accuracy": 0.8463541666666666,
+            "balanced_accuracy": 0.7704570791527314,
+            "healthy_recall": 0.8657004830917875,
+            "faulty_recall": 0.6752136752136753
+          },
+          "max_probability_delta": 1.1920928955078125e-07
+        }
+      }
+    }
+  }
+}

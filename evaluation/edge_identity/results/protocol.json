@@ -1,0 +1,41 @@
+{
+  "source": "phase3.layout_pose.benchmark",
+  "condition": "hand",
+  "distance_mode": "cube_vertex",
+  "tracker": "hybrid, unchanged; neither validation route feeds back to tracking",
+  "seeds": [
+    13,
+    57,
+    92
+  ],
+  "original_raw_frame_metrics_verified": 336,
+  "frames_per_seed": 28,
+  "layouts": {
+    "A_same": [
+      1,
+      -1,
+      1
+    ],
+    "B_opposite": [
+      -1,
+      1,
+      -1
+    ],
+    "upper_coverage": [
+      -1,
+      1,
+      1
+    ],
+    "upper_conditioning": [
+      -1,
+      -1,
+      1
+    ]
+  },
+  "gate": {
+    "normal_rms_px": 2.5,
+    "max_unsigned_angle_deg": 8.0,
+    "min_finite_overlap_of_observed_fraction": 0.6
+  },
+  "leave_camera_out": "Same pre-fit causal prior; target camera excluded from this frame fit only"
+}

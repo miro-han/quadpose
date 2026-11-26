@@ -1,0 +1,26 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+  "python": "3.12.10",
+  "numpy": "2.5.3",
+  "scenario": "stress",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "frames_per_trial": 75,
+  "warmup_frames_per_layout": 75,
+  "results": {
+    "same": {
+      "timed_frames": 225,
+      "p50_ms": 16.649,
+      "p95_ms": 23.99015999999998
+    },
+    "opposite": {
+      "timed_frames": 225,
+      "p50_ms": 19.7741,
+      "p95_ms": 27.51112
+    }
+  }
+}

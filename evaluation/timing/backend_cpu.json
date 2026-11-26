@@ -1,0 +1,124 @@
+{
+  "measured_utc": "2026-11-25T16:23:30.858893+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cpu": "AMD Ryzen 7 6800H with Radeon Graphics",
+  "logical_cpus": 16,
+  "python": "3.12.10",
+  "numpy": "2.5.4",
+  "blas_thread_limit_env": 1,
+  "load_note": "Shared desktop environment; background and concurrent loads uncontrolled.",
+  "workload": "phase2.fusion synthetic benchmark, held-out test split",
+  "timed_input": "precomputed unlabeled corner and segment detections, calibration, cuboid and shared prior",
+  "excluded": [
+    "simulation and rolling-prior preparation",
+    "camera I/O",
+    "video decoding",
+    "SAM / LK / image feature detection",
+    "serialization and disk I/O"
+  ],
+  "families": [
+    {
+      "id": "test-clean-00",
+      "seed": 880000,
+      "frames": 24
+    },
+    {
+      "id": "test-wrong_association-00",
+      "seed": 880001,
+      "frames": 24
+    },
+    {
+      "id": "test-unequal_quality-00",
+      "seed": 880002,
+      "frames": 24
+    },
+    {
+      "id": "test-occlusion-00",
+      "seed": 880003,
+      "frames": 24
+    },
+    {
+      "id": "test-missing-00",
+      "seed": 880004,
+      "frames": 24
+    },
+    {
+      "id": "test-extrinsics-00",
+      "seed": 880005,
+      "frames": 24
+    },
+    {
+      "id": "test-time_skew-00",
+      "seed": 880006,
+      "frames": 24
+    },
+    {
+      "id": "test-simultaneous-00",
+      "seed": 880007,
+      "frames": 24
+    }
+  ],
+  "unique_frames": 192,
+  "warmup_frames_per_method": 16,
+  "repeats": 3,
+  "order": "Alternates method-first order each frame and repeat",
+  "unique_frame_points_sum_range": [
+    22,
+    36
+  ],
+  "unique_frame_segments_sum_range": [
+    22,
+    42
+  ],
+  "metrics": {
+    "all_joint_only": {
+      "samples": 576,
+      "p50_ms": 6.5261499999999995,
+      "p95_ms": 10.456075
+    },
+    "diagnostics_and_reliable": {
+      "samples": 576,
+      "p50_ms": 35.043949999999995,
+      "p95_ms": 52.678675
+    }
+  },
+  "per_repeat": [
+    {
+      "all_joint_only": {
+        "samples": 192,
+        "p50_ms": 6.355,
+        "p95_ms": 10.914444999999999
+      },
+      "diagnostics_and_reliable": {
+        "samples": 192,
+        "p50_ms": 35.33985,
+        "p95_ms": 53.494485
+      }
+    },
+    {
+      "all_joint_only": {
+        "samples": 192,
+        "p50_ms": 6.8916,
+        "p95_ms": 10.138185
+      },
+      "diagnostics_and_reliable": {
+        "samples": 192,
+        "p50_ms": 36.80475,
+        "p95_ms": 54.188459999999985
+      }
+    },
+    {
+      "all_joint_only": {
+        "samples": 192,
+        "p50_ms": 6.3793500000000005,
+        "p95_ms": 9.555784999999998
+      },
+      "diagnostics_and_reliable": {
+        "samples": 192,
+        "p50_ms": 34.13785,
+        "p95_ms": 47.746975
+      }
+    }
+  ],
+  "p50_ratio": 5.369773909579155
+}

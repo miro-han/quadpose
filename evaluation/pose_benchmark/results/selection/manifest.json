@@ -1,0 +1,170 @@
+{
+  "config_file": "benchmark_config.json",
+  "config": {
+    "development_seeds": [
+      41011,
+      41039
+    ],
+    "test_seeds": [
+      53003,
+      53017
+    ],
+    "frames": 18,
+    "cadence_hz": 30,
+    "fault_start": 5,
+    "fault_end_exclusive": 12,
+    "success_translation_mm": 20,
+    "success_rotation_deg": 8,
+    "recovery_consecutive_measured": 3,
+    "layouts": {
+      "upper_rear": [
+        -1,
+        1,
+        1
+      ],
+      "upper_front": [
+        -1,
+        -1,
+        1
+      ],
+      "lower_rear": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    "regimes": [
+      "clean",
+      "self_occlusion",
+      "external_occlusion",
+      "wrong_edge_ids",
+      "corner_dropout",
+      "fragmentation",
+      "single_camera_fault",
+      "multiple_camera_faults",
+      "calibration_error",
+      "time_skew",
+      "rapid_rotation",
+      "reacquisition",
+      "combined",
+      "one_view",
+      "parallel_edges"
+    ],
+    "primary_methods": [
+      "phase2_all",
+      "phase2_best",
+      "cross",
+      "cross_verify",
+      "cross_alternating",
+      "oracle_all"
+    ],
+    "selection_diagnostic": {
+      "layouts": [
+        "upper_rear"
+      ],
+      "regimes": [
+        "wrong_edge_ids",
+        "calibration_error",
+        "combined"
+      ],
+      "methods": [
+        "phase2_all",
+        "phase2_best",
+        "cross",
+        "cross_verify",
+        "cross_alternating"
+      ]
+    },
+    "assignment_diagnostic": {
+      "layouts": [
+        "upper_rear"
+      ],
+      "regimes": [
+        "fragmentation",
+        "wrong_edge_ids",
+        "combined"
+      ],
+      "methods": [
+        "single_legacy",
+        "single_gated",
+        "single_hungarian",
+        "single_topology",
+        "single_full",
+        "remove",
+        "reassign",
+        "alternate"
+      ]
+    },
+    "recovery_diagnostic": {
+      "layouts": [
+        "upper_rear"
+      ],
+      "regimes": [
+        "reacquisition",
+        "single_camera_fault",
+        "multiple_camera_faults",
+        "one_view",
+        "combined"
+      ],
+      "modes": [
+        "hold",
+        "adaptive",
+        "velocity",
+        "multi",
+        "pnp",
+        "partial",
+        "full"
+      ]
+    },
+    "observability_diagnostic": {
+      "layouts": [
+        "upper_rear"
+      ],
+      "regimes": [
+        "one_view",
+        "multiple_camera_faults",
+        "parallel_edges"
+      ],
+      "modes": [
+        "hold",
+        "partial"
+      ]
+    }
+  },
+  "suite": "selection",
+  "smoke": false,
+  "layouts": [
+    "upper_rear"
+  ],
+  "regimes": [
+    "wrong_edge_ids",
+    "calibration_error",
+    "combined"
+  ],
+  "seeds": [
+    41011,
+    41039
+  ],
+  "methods": [
+    "phase2_all",
+    "phase2_best",
+    "cross",
+    "cross_verify",
+    "cross_alternating"
+  ],
+  "rows": 540,
+  "source_sha256": {
+    "benchmark.py": "a1beb19422f0c651ef126a9f13178e262446d18eb2a5020a9b1be50bda87b0ec",
+    "benchmark_data.py": "c5ad5c13f6a43450efc28c9c56b3248089fa34642a5a4e5af0c8f8c225fab75d",
+    "benchmark_config.json": "a664b08575f3bf37f76c3c483362ea44677950ff20f41d46b715dae9f2343ea7",
+    "hypotheses.py": "0985685c322075f2f5cdd7657e4fcb9a2055ccca7d3fac4caf6543028c3eebfc",
+    "refinement.py": "f6591a78304842c06f4f62141883de470f02fd8e68951519429c32fcc54340a6",
+    "recovery.py": "0274da7ac25bc3e2c1fcabd37e983eab093772671158a029e82acdc3a2d94c47"
+  },
+  "peak_process_rss_mib": 40.89453125,
+  "warmup_frames_per_method": 1,
+  "pipeline": "CPU NumPy, host wall clock; unisolated host loads",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10",
+  "numpy": "2.5.4"
+}

@@ -1,0 +1,106 @@
+다중 RGB 카메라 상자 에지 융합 및 자세 추정: 1차 조사
+확인일: 2026-11-24 (Asia/Seoul)
+
+아래 자료는 저자·연구기관 저장소, 공식 문서, 원 논문을 우선 확인했다.
+논문/README/공개 API를 검토한 상태이며, 해당 방법들을 사용자 영상에서 실행한 성능 비교는 아직 없다.
+ViSP 웹 튜토리얼은 접근 제한으로 읽지 못해 공식 GitHub 헤더 및 소스를 대신 확인했다.
+
+1. OpenCV Canny (현재 기준 실험)
+공식 문서: https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
+밝기 기울기와 두 임계값, 연결성을 이용한다. 색상 자체를 물체 ID로 판단하지 않는다.
+그림자·배경의 강한 경계도 검출하며, 약한 물체 경계는 사라질 수 있다.
+현재 check_edges.py는 이 라이브러리 함수를 호출한다. 실험/저장 부분은 직접 작성했으며 특정 논문 추적기를 재현한 코드는 아니다.
+
+2. LSD: a Line Segment Detector
+Rafael Grompone von Gioi, Jérémie Jakubowicz, Jean-Michel Morel, Gregory Randall. IPOL, 2012.
+논문/저자 코드: https://doi.org/10.5201/ipol.2012.gjmr-lsd
+논문 페이지: https://edit.ipol.im/pub/art/2012/gjmr-lsd/
+OpenCV API: https://docs.opencv.org/4.x/db/d73/classcv_1_1LineSegmentDetector.html
+픽셀 에지보다 상자의 직선 모서리 관측에 가까운 선분을 출력하는 비교 후보.
+논문의 parameter tuning 불필요라는 설명은 상자 식별이나 모든 조명에서의 완벽한 복원을 보장하지 않는다.
+바닥 타일 선, 인쇄 무늬, 그림자의 직선도 후보가 될 수 있다.
+
+3. ViSP model-based tracker
+기관 저장소: https://github.com/lagadic/visp
+구체적인 API/설명: https://github.com/lagadic/visp/blob/master/modules/tracker/mbt/include/visp3/mbt/vpMbGenericTracker.h
+구현: https://github.com/lagadic/visp/blob/master/modules/tracker/mbt/src/vpMbGenericTracker.cpp
+공식 예제: https://github.com/lagadic/visp/blob/master/tutorial/tracking/model-based/generic/tutorial-mb-generic-tracker-live.cpp
+moving-edge 기반 모델 추적, 카메라별 내부/상대 외부 파라미터, 여러 카메라 관측을 처리하는 API를 제공한다.
+현재 목표와 직접적인 관련이 크다. 3D 모델, 카메라 보정, 초기 자세가 필요하며 에지만으로 초기 식별까지 자동 해결한다고 간주하면 안 된다.
+주요 공개 구현은 C++이다. 실제 도입 전 빌드 및 필요한 Python 바인딩 지원 범위를 확인해야 한다.
+
+4. M3T / ICG (DLR)
+저장소: https://github.com/DLR-RM/3DObjectTracking
+M3T 설명: https://github.com/DLR-RM/3DObjectTracking/blob/master/M3T/readme.md
+M3T: A Multi-body Multi-modality Multi-camera 3D Tracker.
+연결 문헌: Manuel Stoiber, Closing the Loop: 3D Object Tracking for Advanced Robotic Manipulation, dissertation, 2023 (저장소 표기).
+ICG 논문: Manuel Stoiber, Martin Sundermeyer, Rudolph Triebel. Iterative Corresponding Geometry: Fusing Region and Depth for Highly Efficient 3D Tracking of Textureless Objects. CVPR 2022.
+https://openaccess.thecvf.com/content/CVPR2022/papers/Stoiber_Iterative_Corresponding_Geometry_Fusing_Region_and_Depth_for_Highly_Efficient_CVPR_2022_paper.pdf
+M3T는 여러 color/depth 카메라와 region/depth/texture 관측의 결합을 지원한다. RGB region 구성도 가능하다.
+일반 Canny 에지맵을 직접 합치는 알고리즘은 아니다. 공통 Body와 Optimizer에 여러 관측을 연결하는 설계가 참고 대상이다.
+깊이 센서 기반 미지 가림 처리는 RGB 웹캠만으로 그대로 재현할 수 없다. RGB-only 결과를 별도로 평가해야 한다.
+
+5. CosyPose: Consistent multi-view multi-object 6D pose estimation
+Yann Labbe, Justin Carpentier, Mathieu Aubry, Josef Sivic. ECCV 2020.
+논문: https://arxiv.org/abs/2008.08465
+저자 페이지: https://www.di.ens.fr/willow/research/cosypose/
+저자 코드: https://github.com/yannlabb/cosypose
+각 시점의 알려진 물체 자세 후보를 연결하고, 다중 시점 재투영 오차로 장면을 개선한다. 물체 대칭을 다룬다.
+RGB 기반 다중 시점 공동 최적화의 중요한 참고 자료다. 일반 에지 추출기는 아니며 기본 모델은 학습·3D 모델 등의 요구사항이 있다.
+카메라 자세도 추정하는 원 논문 구성과, 이미 보정된 고정 카메라를 사용할 우리 설계는 구분한다.
+
+6. Deep Active Contours for Real-time 6-DoF Object Tracking (DeepAC)
+Long Wang, Shen Yan, Jianan Zhen, Yu Liu, Maojun Zhang, Guofeng Zhang, Xiaowei Zhou. ICCV 2023.
+논문: https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_Deep_Active_Contours_for_Real-time_6-DoF_Object_Tracking_ICCV_2023_paper.pdf
+저자 페이지: https://zju3dv.github.io/deep_ac/
+저자 코드: https://github.com/WangLongZJU/DeepAC
+초기 자세의 3D 모델을 영상에 투영하고, 학습한 경계 위치 분포를 이용해 자세를 최적화한다.
+일반 에지맵보다 대상 모델의 윤곽에 집중하는 접근. 3D 모델과 초기 자세, 사전 학습 가중치가 필요하다.
+원 논문은 RGB 비디오 추적이며, 4대 카메라 공동 추정은 별도 통합 작업이다.
+
+7. Dense Extreme Inception Network (DexiNed)
+Xavier Soria, Edgar Riba, Angel Sappa. Dense Extreme Inception Network: Towards a Robust CNN Model for Edge Detection. WACV 2020.
+논문: https://openaccess.thecvf.com/content_WACV_2020/papers/Poma_Dense_Extreme_Inception_Network_Towards_a_Robust_CNN_Model_for_WACV_2020_paper.pdf
+확장 논문: https://arxiv.org/abs/2112.02250
+저자 코드: https://github.com/xavysp/DexiNed
+학습 기반 일반 에지 검출의 비교 후보. Canny 임계값 조정만 하는 것과 다른 접근이다.
+물체 ID, 물리적 모서리 대응, 그림자 제거, 자세 추정을 자동 보장하지 않는다. 사용자 영상에서 검증해야 한다.
+
+8. Tiny and Efficient Model for the Edge Detection Generalization (TEED)
+논문: https://arxiv.org/abs/2308.06468
+저자 코드: https://github.com/xavysp/TEED
+가벼운 학습 기반 에지 검출기로, 다중 카메라 앞단의 처리 비용을 고려한 비교 후보다.
+논문 속 속도를 우리 PC에서의 속도로 간주하지 않는다. 체크포인트와 입력 전처리 조건을 맞춰 평가해야 한다.
+
+9. SAM 2: Segment Anything in Images and Videos
+논문: https://arxiv.org/abs/2408.00714
+기관 코드: https://github.com/facebookresearch/sam2
+프롬프트 기반 이미지/비디오 물체 영역 분할. 상자 영역 밖의 에지를 줄이는 선택적 보조 수단이다.
+마스크 외곽만으로 상자 면 사이 내부 모서리를 얻을 수는 없다. 마스크 경계가 손에 의한 가림 경계일 수도 있다.
+카메라 간 물리적 모서리 ID 대응과 3D 자세는 별도의 문제다.
+
+공통 판단: 절대적인 검출법 유무
+RGB 관측에서 대상과 배경이 구분되지 않거나 전부 가려졌다면 경계를 유일하게 복원할 수 없는 경우가 있다.
+이는 관측 가능성에 관한 판단이며, 위 자료 중 어느 한 방법이 모든 상황을 해결한다고 주장하는 것이 아니다.
+임계값 자동화, 학습 기반 경계, 영역 분할은 오검출/누락을 줄이는 후보지만 기하 검증을 대체하지 않는다.
+
+권장 통합 방향 (위 자료를 바탕으로 한 프로젝트 설계 제안)
+1) 보정/시간 정렬 -> 카메라별 부분 에지·선분 관측 및 신뢰도.
+2) 상자 모델의 보이는 모서리를 각 영상에 투영.
+3) 근처 관측과 거리·방향을 비교하고, 가림·이상치를 낮게 가중하거나 제외.
+4) 모든 시점의 잔차를 함께 사용해 하나의 회전/이동을 최적화.
+5) 결과로 3D 상자 와이어프레임을 표시하고 다음 프레임 탐색에 활용.
+6) 관측 부족, 대칭 모호성, 재초기화를 명시적으로 처리.
+명시적인 3D 선분 복원을 먼저 하는 경로도 가능하지만, 물리적 대응과 삼각측량의 안정성 검증이 필요하다.
+
+비교 실험 계획
+- 현재 Canny / LSD / TEED 또는 DexiNed를 같은 프레임에 적용.
+- 실촬영 배경·조명·상자 색·그림자·가림 조건을 바꾸어 평가.
+- 모서리 수동 정답을 만들고 경계 위치 오차, 검출된 실제 모서리 비율, 잘못된 모서리, 프레임당 처리 시간을 측정.
+- 다중 시점 평가는 동일 검출을 사용하여 단일 카메라/최적 단일 시점/다중 시점을 비교.
+- 밝기만 인위적으로 바꾼 영상은 보조 실험이며 실제 그림자·반사 변화 실험을 대체하지 않는다.
+
+인용 관리
+- 실제 도입할 때 저장소 URL, commit/tag, 라이선스, 가중치 출처, 수정 내역을 기록한다.
+- 코드 재사용, 논문 아이디어를 참고한 재구현, 직접 작성한 실험 코드를 구분한다.
+- 논문 성능을 우리 실험 결과처럼 보고하지 않는다.

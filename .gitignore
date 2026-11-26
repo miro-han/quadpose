@@ -1,0 +1,53 @@
+# Python virtual environments
+.venv/
+**/.venv/
+.camera_env/
+venv/
+
+# Python caches & test/build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.egg-info/
+build/
+
+# Runtime outputs, logs, and temp files
+/recordings/
+/outputs/
+*.log
+*.tmp
+*.part
+/dist/
+
+# Reproducibly fetched weights & third-party source (see segmentation/setup_sam2.py)
+/models/*.pt
+/models/*.part
+/third_party/*.zip
+/third_party/sam2/
+
+# Native build artifacts (phase3/amd/build_native.cmd)
+*.exe
+*.obj
+*.lib
+*.exp
+*.pdb
+
+# Handoff / snapshot archives
+phase2.zip
+Team7_Complete_Handoff.zip
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Frontend dependencies
+node_modules/
+
+# Local raw sample videos
+data/sample_videos/*.mp4
+data/sample_videos/*.avi
+data/sample_videos/*.mov
+data/sample_videos/*.mkv
+

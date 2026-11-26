@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "team7-plate-tracking"
+version = "0.1.0"
+description = "Multi-view RGB 6DoF cuboid tracking via geometric edge/corner correspondence and SAM 2.1 segmentation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "opencv-python",
+]
+
+[project.optional-dependencies]
+capture = [
+    "cv2-enumerate-cameras",
+]
+segmentation = [
+    "requests",
+    "tqdm",
+    "hydra-core",
+    "omegaconf",
+    "iopath",
+    "Pillow",
+]
+
+[tool.setuptools.packages.find]
+include = ["capture*", "rig*", "perception*", "pose*", "evaluation*", "experiments*", "tools*"]

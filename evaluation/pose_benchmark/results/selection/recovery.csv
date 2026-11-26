@@ -1,0 +1,11 @@
+method,layout,regime,seed,recovered,onset_frames,onset_ms
+phase2_all,upper_rear,combined,41011,False,,
+phase2_best,upper_rear,combined,41011,False,,
+cross,upper_rear,combined,41011,False,,
+cross_verify,upper_rear,combined,41011,False,,
+cross_alternating,upper_rear,combined,41011,False,,
+phase2_all,upper_rear,combined,41039,True,0,0.0
+phase2_best,upper_rear,combined,41039,True,0,0.0
+cross,upper_rear,combined,41039,False,,
+cross_verify,upper_rear,combined,41039,False,,
+cross_alternating,upper_rear,combined,41039,False,,

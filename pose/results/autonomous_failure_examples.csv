@@ -1,0 +1,13 @@
+split,trial,regime,frame,in_fault,recovery,method,valid,pose_failed,failed,false_valid,inaccurate_valid,fewer_than_3_healthy,policy_violation_valid,translation_mm,rotation_deg,support_mask,fault_mask,faulty_views_accepted,valid_support_count,corner_matches,correct_corner_matches,edge_matches,correct_edge_matches,failure_category
+test,test-simultaneous-01,simultaneous,20,True,False,all,True,True,True,True,True,True,True,33.53509560570462,22.696330879474317,1111,0101,2,4,17,15,16,16,wrong_pose_emitted
+test,test-simultaneous-01,simultaneous,19,True,False,average,True,True,True,True,True,True,True,28.030478411277613,18.203635142075477,1111,0101,2,4,14,14,18,16,wrong_pose_emitted
+test,test-simultaneous-00,simultaneous,20,True,False,best,True,False,False,True,False,True,True,17.52485998520249,6.67191046813474,0111,1001,1,3,14,7,17,8,fewer_than_three_healthy
+test,test-simultaneous-02,simultaneous,32,True,False,reliable,True,False,False,True,False,True,True,1.3565725577418026,1.6544956418717653,1101,0110,1,3,7,7,10,9,fewer_than_three_healthy
+test,test-simultaneous-01,simultaneous,14,True,False,oracle_reliable,True,False,False,True,False,True,True,1.395800845458276,1.0565843143677653,1110,0101,1,3,16,16,16,16,fewer_than_three_healthy
+test,test-unequal_quality-01,unequal_quality,46,False,True,reliable,False,True,True,False,False,False,False,82.85205595481146,22.902825503043232,0000,0000,0,0,0,0,0,0,invalid_or_held
+test,test-unequal_quality-02,unequal_quality,1,False,False,average,False,True,True,False,False,False,False,41.39971303964014,15.22533770582226,0000,0000,0,0,0,0,0,0,invalid_or_held
+test,test-unequal_quality-02,unequal_quality,1,False,False,best,False,True,True,False,False,False,False,41.39971303964014,15.22533770582226,0000,0000,0,0,0,0,0,0,invalid_or_held
+test,test-time_skew-02,time_skew,0,False,False,reliable,False,True,True,False,False,False,False,26.419240451481713,12.088875809346872,0000,0000,0,0,0,0,0,0,invalid_or_held
+test,test-extrinsics-02,extrinsics,0,False,False,average,False,True,True,False,False,False,False,22.511404658889113,12.402787639957717,0000,0000,0,0,0,0,0,0,invalid_or_held
+test,test-extrinsics-02,extrinsics,0,False,False,best,False,True,True,False,False,False,False,22.511404658889113,12.402787639957717,0000,0000,0,0,0,0,0,0,invalid_or_held
+test,test-extrinsics-02,extrinsics,0,False,False,reliable,False,True,True,False,False,False,False,22.511404658889113,12.402787639957717,0000,0000,0,0,0,0,0,0,invalid_or_held

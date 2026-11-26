@@ -1,0 +1,60 @@
+{
+  "size_m": [
+    0.12,
+    0.12,
+    0.12
+  ],
+  "T_world_object": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "manual_pixels": [
+    [
+      963.0,
+      515.0
+    ],
+    [
+      1198.0,
+      515.0
+    ],
+    [
+      940.0,
+      348.0
+    ],
+    [
+      1161.0,
+      345.0
+    ],
+    [
+      946.0,
+      710.0
+    ],
+    [
+      1155.0,
+      677.0
+    ]
+  ],
+  "notes": "Assumed cube dimensions, focal length and zero distortion; six manual clicks on this same frame. IDs and residuals illustrate conditional associations only."
+}

@@ -1,0 +1,407 @@
+{
+  "pid": 8280,
+  "cv": "5.0.0",
+  "runtime": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\amdocl.inf_amd64_7b4e64250e49ad58\\amdocl64.dll",
+  "opencl_device": "gfx1035",
+  "vendor": "Advanced Micro Devices, Inc.",
+  "driver": "3570.0 (PAL,LC)",
+  "adapters": [
+    {
+      "index": 0,
+      "description": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "vendor": "0x10de",
+      "device": "0x2560",
+      "luid": "0x00000000_0x00011d84",
+      "dedicated_video_mib": 5994.0,
+      "shared_system_mib": 15970.35546875
+    },
+    {
+      "index": 1,
+      "description": "AMD Radeon(TM) Graphics",
+      "vendor": "0x1002",
+      "device": "0x1681",
+      "luid": "0x00000000_0x0001386d",
+      "dedicated_video_mib": 485.796875,
+      "shared_system_mib": 15970.35546875
+    },
+    {
+      "index": 2,
+      "description": "Microsoft Basic Render Driver",
+      "vendor": "0x1414",
+      "device": "0x008c",
+      "luid": "0x00000000_0x000137f0",
+      "dedicated_video_mib": 0.0,
+      "shared_system_mib": 15970.35546875
+    }
+  ],
+  "threads": 1,
+  "process_memory_cap_gib": 4,
+  "peak_working_set_mib": 272.046875,
+  "process_local_nonlocal_bytes": {
+    "start": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        0,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "blur_cpu": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        104636416,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "blur_amd_resident": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        124510208,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "blur_amd_roundtrip": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        124510208,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "canny_cpu": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        124510208,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "canny_amd_resident": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        125493248,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "canny_amd_roundtrip": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        125493248,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "morph_close_cpu": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        125493248,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "morph_close_amd_resident": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        125493248,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "morph_close_amd_roundtrip": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        125493248,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "pyr_lk_cpu": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        125493248,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "pyr_lk_amd_resident": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        146530304,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "pyr_lk_amd_roundtrip": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        146530304,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "chain_cpu": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        146530304,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "chain_amd_resident": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        146530304,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    },
+    "chain_amd_roundtrip": {
+      "0x10de": [
+        0,
+        0
+      ],
+      "0x1002": [
+        146530304,
+        0
+      ],
+      "0x1414": [
+        0,
+        0
+      ]
+    }
+  },
+  "engine_counter_issue": "PDH status 0xc0000bc8",
+  "results": {
+    "blur": {
+      "cpu": {
+        "repeats": 279,
+        "p50_ms": 2.7321,
+        "p95_ms": 3.8806599999999993,
+        "process_gpu_engines_pct": {},
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      },
+      "amd_resident": {
+        "repeats": 519,
+        "p50_ms": 1.4763,
+        "p95_ms": 2.046329999999999,
+        "process_gpu_engines_pct": {},
+        "pixel_agreement": 0.9996330054012346,
+        "mean_abs_difference": 0.0003669945987654321
+      },
+      "amd_roundtrip": {
+        "repeats": 219,
+        "p50_ms": 3.5082,
+        "p95_ms": 4.802829999999999,
+        "process_gpu_engines_pct": {},
+        "pixel_agreement": 0.9996330054012346,
+        "mean_abs_difference": 0.0003669945987654321
+      }
+    },
+    "canny": {
+      "cpu": {
+        "repeats": 69,
+        "p50_ms": 11.8635,
+        "p95_ms": 13.61096,
+        "process_gpu_engines_pct": {},
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      },
+      "amd_resident": {
+        "repeats": 478,
+        "p50_ms": 1.6306,
+        "p95_ms": 1.9002849999999998,
+        "process_gpu_engines_pct": {},
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      },
+      "amd_roundtrip": {
+        "repeats": 173,
+        "p50_ms": 4.427,
+        "p95_ms": 5.95166,
+        "process_gpu_engines_pct": {},
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      }
+    },
+    "morph_close": {
+      "cpu": {
+        "repeats": 299,
+        "p50_ms": 2.7024,
+        "p95_ms": 3.155689999999999,
+        "process_gpu_engines_pct": {},
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      },
+      "amd_resident": {
+        "repeats": 522,
+        "p50_ms": 1.4777,
+        "p95_ms": 1.9911149999999995,
+        "process_gpu_engines_pct": {},
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      },
+      "amd_roundtrip": {
+        "repeats": 184,
+        "p50_ms": 4.0916999999999994,
+        "p95_ms": 6.06635,
+        "process_gpu_engines_pct": {},
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      }
+    },
+    "pyr_lk": {
+      "cpu": {
+        "repeats": 27,
+        "p50_ms": 29.7912,
+        "p95_ms": 34.259299999999996,
+        "process_gpu_engines_pct": {},
+        "common_valid": 300,
+        "status_agreement": 1.0,
+        "median_endpoint_delta_px": 0.0
+      },
+      "amd_resident": {
+        "repeats": 132,
+        "p50_ms": 5.234,
+        "p95_ms": 9.987154999999996,
+        "process_gpu_engines_pct": {},
+        "common_valid": 300,
+        "status_agreement": 1.0,
+        "median_endpoint_delta_px": 0.0022111835423856974
+      },
+      "amd_roundtrip": {
+        "repeats": 119,
+        "p50_ms": 6.6692,
+        "p95_ms": 7.758629999999999,
+        "process_gpu_engines_pct": {},
+        "common_valid": 300,
+        "status_agreement": 1.0,
+        "median_endpoint_delta_px": 0.0022111835423856974
+      }
+    },
+    "chain": {
+      "cpu": {
+        "repeats": 63,
+        "p50_ms": 12.7116,
+        "p95_ms": 14.24957,
+        "process_gpu_engines_pct": {},
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      },
+      "amd_resident": {
+        "repeats": 176,
+        "p50_ms": 4.46945,
+        "p95_ms": 5.229900000000001,
+        "process_gpu_engines_pct": {},
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      },
+      "amd_roundtrip": {
+        "repeats": 117,
+        "p50_ms": 6.6293,
+        "p95_ms": 7.750699999999999,
+        "process_gpu_engines_pct": {},
+        "pixel_agreement": 1.0,
+        "mean_abs_difference": 0.0
+      }
+    }
+  },
+  "shape": [
+    1080,
+    1920
+  ],
+  "lk_points": 300
+}

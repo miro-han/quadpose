@@ -1,0 +1,3 @@
+scenario,layout,views,association,method,frames,translation_rmse_mm,rotation_rmse_deg,translation_p95_mm,rotation_p95_deg,held_frames,failed_frames,invalid_rate_pct,failure_rate_pct,matches,wrong_matches,wrong_match_pct
+baseline,common,axes,estimated,hybrid,225,0.22267832082322617,0.1688718640520432,0.36191111848487983,0.2890490969749458,0,0,0.0,0.0,8487,251,2.957464357252268
+stress,common,axes,estimated,hybrid,225,0.7586411700183402,0.5107629392258695,1.2226483332244964,0.7952734406931506,0,0,0.0,0.0,6778,1347,19.87311891413396

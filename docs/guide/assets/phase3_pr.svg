@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 264" role="img">
+<title>Phase III · B 배치의 동일 물리선 쌍 · 합성 84프레임</title>
+<rect width="100%" height="100%" fill="white"/>
+<text x="20" y="31" font-family="Malgun Gothic, sans-serif" font-size="20" text-anchor="start" fill="#17324d">Phase III · B 배치의 동일 물리선 쌍 · 합성 84프레임</text>
+<text x="168" y="57" font-family="Malgun Gothic, sans-serif" font-size="14" text-anchor="start" fill="#2171b5">정밀도</text>
+<text x="18" y="91" font-family="Malgun Gothic, sans-serif" font-size="14" text-anchor="start" fill="#17324d">raw</text>
+<line x1="175" y1="84" x2="504.2344921497026" y2="84" stroke="#2171b5" stroke-width="6" stroke-dasharray="none"/>
+<text x="511.2344921497026" y="88" font-family="Malgun Gothic, sans-serif" font-size="13" text-anchor="start" fill="#2171b5">68.22 %</text>
+<text x="18" y="143" font-family="Malgun Gothic, sans-serif" font-size="14" text-anchor="start" fill="#17324d">in_fit_gate</text>
+<line x1="175" y1="136" x2="648.7134477182897" y2="136" stroke="#2171b5" stroke-width="6" stroke-dasharray="none"/>
+<text x="655.7134477182897" y="140" font-family="Malgun Gothic, sans-serif" font-size="13" text-anchor="start" fill="#2171b5">98.15 %</text>
+<text x="18" y="195" font-family="Malgun Gothic, sans-serif" font-size="14" text-anchor="start" fill="#17324d">left_camera_out_gate</text>
+<line x1="175" y1="188" x2="652.0" y2="188" stroke="#2171b5" stroke-width="6" stroke-dasharray="none"/>
+<text x="659.0" y="192" font-family="Malgun Gothic, sans-serif" font-size="13" text-anchor="start" fill="#2171b5">98.83 %</text>
+<text x="408" y="57" font-family="Malgun Gothic, sans-serif" font-size="14" text-anchor="start" fill="#087f73">재현율</text>
+<line x1="175" y1="101" x2="533.5993221373556" y2="101" stroke="#087f73" stroke-width="6" stroke-dasharray="none"/>
+<text x="540.5993221373556" y="105" font-family="Malgun Gothic, sans-serif" font-size="13" text-anchor="start" fill="#087f73">74.30 %</text>
+<line x1="175" y1="153" x2="504.41524709057177" y2="153" stroke="#087f73" stroke-width="6" stroke-dasharray="none"/>
+<text x="511.41524709057177" y="157" font-family="Malgun Gothic, sans-serif" font-size="13" text-anchor="start" fill="#087f73">68.25 %</text>
+<line x1="175" y1="205" x2="483.98639455782313" y2="205" stroke="#087f73" stroke-width="6" stroke-dasharray="none"/>
+<text x="490.98639455782313" y="209" font-family="Malgun Gothic, sans-serif" font-size="13" text-anchor="start" fill="#087f73">64.02 %</text>
+</svg>

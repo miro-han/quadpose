@@ -1,0 +1,61 @@
+{
+  "video": "WIN_20261124_20_05_34_Pro.mp4",
+  "video_sha256": "85ec02f0fa57343d87045f72eb2950fc036f7ff33233ff743c2c9b01761c55c5",
+  "width": 1920,
+  "height": 1080,
+  "box": [
+    831.5766738660907,
+    272.9157667386609,
+    1237.451403887689,
+    706.7818574514039
+  ],
+  "frames": 30,
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "torch": "2.8.0+cu126",
+  "precision": "fp16",
+  "tf32": false,
+  "clip_to_output_wall_ms": 18890.270599978976,
+  "model_load": {
+    "wall_ms": 1757.2278000006918,
+    "cuda_stream_ms": 1680.953369140625
+  },
+  "decode_ms": 669.5316999976058,
+  "preprocessing": {
+    "jpeg_encode_ms": 413.3350999909453,
+    "jpeg_file_write_ms": 36.988999985624105,
+    "jpeg_read_decode_resize_normalize_ms": 3436.990899994271
+  },
+  "upload_all": {
+    "wall_ms": 68.2684000057634,
+    "cuda_stream_ms": 68.07532501220703
+  },
+  "inference": {
+    "init": {
+      "wall_ms": 727.7114999887999,
+      "cuda_stream_ms": 727.594482421875
+    },
+    "prompt": {
+      "wall_ms": 318.66289998288266,
+      "cuda_stream_ms": 318.4701232910156
+    },
+    "propagate": {
+      "wall_ms": 7196.420799999032,
+      "cuda_stream_ms": 7195.0205078125
+    },
+    "threshold_and_finite_check": {
+      "wall_ms": 40.49790001590736,
+      "cuda_stream_ms": 40.185855865478516
+    },
+    "download_mask": {
+      "wall_ms": 12.419000006048009,
+      "cuda_stream_ms": 12.07910442352295
+    }
+  },
+  "output": {
+    "overlay_and_edge_cpu_ms": 1771.0821999935433,
+    "png_encode_cpu_ms": 846.8099000165239,
+    "png_json_file_write_ms": 61.611799988895655,
+    "mp4_encode_and_write_ms": 1310.0953999964986,
+    "output_bytes": 1373084
+  }
+}
